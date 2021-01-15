@@ -1,0 +1,1070 @@
+﻿<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="이 항목에서는 HDR (High Dynamic Range) 비디오 형식의 Zencoder 지원에 대한 세부 정보를 제공합니다.">
+
+  <title>지원되는 HDR 비디오 형식</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-ultra.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-ultra.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-super.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-super.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-black.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-black.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-bold.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-bold.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-medium.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-medium.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+  <script src="/assets/js/sajari-head.js"></script>
+</head>
+
+<body class="body">
+
+<header>
+  <div class="div-header">
+    <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/Zencoder_Logo.svg" alt="제품 로고" style="max-height: 100px;max-width: 232px;"/></a>
+<!-- GTranslate: https://gtranslate.io/ -->
+<select onchange="doGTranslate(this);"><option value="">언어 선택</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
+
+<script>
+/* <![CDATA[ */
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+    <select id="site_select" class="bcls-select" style="margin-right: 1rem;">
+      <option value="">기타 브라이트코브 문서</option>
+      
+        
+          <option value="https://support.brightcove.com">설명서 홈</option>
+        
+      
+        
+          <option value="https://audience.support.brightcove.com">브라이트코브 대상</option>
+        
+      
+        
+          <option value="https://beacon.support.brightcove.com">브라이트코브 비콘</option>
+        
+      
+        
+          <option value="https://campaign.support.brightcove.com">브라이트코브 캠페인</option>
+        
+      
+        
+          <option value="https://engage.support.brightcove.com">브라이트코브 참여</option>
+        
+      
+        
+          <option value="https://live.support.brightcove.com">Brightcove Live</option>
+        
+      
+        
+          <option value="https://gallery.support.brightcove.com">Brightcove Gallery</option>
+        
+      
+        
+          <option value="https://ssai.support.brightcove.com">Brightcove SSAI</option>
+        
+      
+        
+          <option value="https://social.support.brightcove.com">브라이트코브 소셜</option>
+        
+      
+        
+          <option value="https://studio.support.brightcove.com">비디오 클라우드 스튜디오</option>
+        
+      
+        
+          <option value="https://player.support.brightcove.com">브라이트코브 플레이어 개발</option>
+        
+      
+        
+          <option value="https://apis.support.brightcove.com">비디오 클라우드 플랫폼 API</option>
+        
+      
+        
+          <option value="https://sdks.support.brightcove.com">비디오 클라우드 디바이스 SDK</option>
+        
+      
+        
+          <option value="https://integrations.support.brightcove.com">통합 및 CMS 커넥터</option>
+        
+      
+        
+          <option value="https://general.support.brightcove.com">비디오 클라우드 일반 정보</option>
+        
+      
+        
+          <option value="https://zencoder.support.brightcove.com">Zencoder</option>
+        
+      
+    </select>
+
+
+    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?"><img src="https://support.brightcove.com/site-assets/images/site/support.png" alt="지원"/> 고객 지원 문의</a> <span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/"><img src="https://support.brightcove.com/site-assets/images/site/status.png" alt="시스템 상태"/> 시스템 상태</a></span> <br/>
+    
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+      
+      <li class="breadcrumb-item"><a href="/">홈</a></li>
+      
+      
+      
+      <li class="breadcrumb-item"><a href="/encoding-guides/">인코딩 안내선</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">지원되는 HDR 비디오 형식</li>
+    </ol>
+  </nav>
+</header>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-3 left-side-bar">
+        <nav class="sidenav" id="side_nav">
+          
+            
+            <h5><a href="/index.html">홈</a></h5>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/getting-started/index.html">시작하기 <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/getting-started/overview-zencoder.html">개요</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/quick-start-zencoder.html">빠른 시작</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/getting-api-key.html">API 키 가져오기</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/output-settings.html">출력 설정</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/creating-multiple-outputs.html">다중 출력 생성</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/general-information/index.html">일반 정보 <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/general-information/faq-basics.html">기본 사항</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/faq-codecs-and-formats.html">코덱 및 형식</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/faq-encoding.html">인코딩</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/faq-file-transfers.html">파일 전송</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/faq-zencoder-pricing.html">Zencoder 가격 책정</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/faq-rate-limiting.html">속도 제한</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/supported-video-and-audio-formats-codecs-and-containers.html">지원되는 비디오 및 오디오 형식</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/overview-context-aware-encoding.html">개요: 컨텍스트 인식 인코딩</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/getting-notifications-when-videos-are-finished.html">비디오 완료 시 알림 받기</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/how-zencoder-saves-your-files-when-uploads-fail.html">업로드 실패 시 Zencoder가 파일을 저장하는 방법</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/using-zencoder-s3.html">S3에서 젠코더 사용</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/using-zencoder-azure.html">Azure에서 젠코더 사용</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/using-zencoder-google-cloud-platform.html">Google 클라우드 스토리지에서 Zencoder를 사용하기</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/references/index.html">참고 문헌 <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/references/reference.html">API 참조</a></li>
+                  
+                
+                  
+                    <li><a href="/references/known-issues.html">알려진 문제</a></li>
+                  
+                
+                  
+                    <li><a href="/references/release-notes.html">제품 업데이트</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/encoding-settings/index.html">인코딩 설정 <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/encoding-settings/general/index.html">일반 설정 <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/encoding-settings/general/encoding-settings-job.html">작업 설정</a></li>
+                        
+                        <li><a href="/encoding-settings/general/encoding-settings-general-output-settings.html">일반 출력 설정</a></li>
+                        
+                        <li><a href="/encoding-settings/general/cae-settings.html">CAE 설정</a></li>
+                        
+                        <li><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html">조건부 출력 설정</a></li>
+                        
+                        <li><a href="/encoding-settings/general/encoding-settings-notifications.html">알림 설정</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/encoding-settings/general-audio-video/index.html">오디오/비디오 설정 <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-audio.html">오디오 설정</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-audio-processing.html">오디오 처리 설정</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-video.html">비디오 설정</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html">비디오 처리 설정</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-broadcast.html">브로드캐스트 설정</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-frame-rate.html">프레임 속도 설정</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html">요율 제어 설정</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-resolution.html">해상도 설정</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html">세그먼트화된 스트리밍 설정</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-transmuxing.html">변환 설정</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/encoding-settings/formats-codecs/index.html">형식 및 코덱 설정 <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html">형식 및 코덱 설정</a></li>
+                        
+                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-aac.html">AAC 설정</a></li>
+                        
+                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-flv.html">FLV 설정</a></li>
+                        
+                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html">HDR 설정</a></li>
+                        
+                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html">H.264 설정</a></li>
+                        
+                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-mp4.html">MP4 설정</a></li>
+                        
+                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html">VP6 설정</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/encoding-settings/assets/index.html">미디어 에셋 설정 <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/encoding-settings/assets/encoding-settings-captions.html">캡션 설정</a></li>
+                        
+                        <li><a href="/encoding-settings/assets/encoding-settings-clips.html">클립 설정</a></li>
+                        
+                        <li><a href="/encoding-settings/assets/encoding-settings-thumbnails.html">썸네일 설정</a></li>
+                        
+                        <li><a href="/encoding-settings/assets/encoding-settings-watermarks.html">워터마크 설정</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/encoding-settings/content-protection/index.html">컨텐츠 보호 설정 <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/encoding-settings/content-protection/encoding-settings-encryption.html">암호화 설정</a></li>
+                        
+                        <li><a href="/encoding-settings/content-protection/encoding-settings-decryption.html">암호 해독 설정</a></li>
+                        
+                        <li><a href="/encoding-settings/content-protection/encoding-settings-drm.html">DRM 설정</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/encoding-settings/sources-destinations/index.html">원본/대상 설정 <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html">S3 설정</a></li>
+                        
+                        <li><a href="/encoding-settings/sources-destinations/encoding-settings-aspera.html">아스페라 설정</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/encoding-guides/index.html">인코딩 안내선 <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/encoding-guides/advanced-audio-mapping-guide.html">오디오 매핑 가이드</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/as11-mxf.html">AS-11-MXF 가이드</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/avc-intra-guide.html">AVC-인트라 가이드</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/cae-guide.html">CAE 가이드</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/creating-mp4-and-hls-outputs-together.html">트랜스머싱 가이드</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/dash-streaming-and-playlists.html">DASH 스트리밍 및 재생 목록</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/h264-advanced-guide.html">H.264 고급 가이드</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/hdr10-video-output.html">지원되는 HDR 비디오 형식</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/hevch265-guide.html">HEVC/H.265 가이드</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/highwinds-smil.html">하이윈즈 SMIL 가이드</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/html5-encoding.html">HTML5 인코딩</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/http-live-segmented-streaming-and-playlists.html">HLS 스트리밍 및 재생 목록</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/http-live-streaming-using-fragmented-mp4.html">조각난 MP4를 사용하는 HLS</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/iosmobile-encoding.html">iOS/모바일 인코딩 가이드</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/microsoft-smooth-streaming.html">마이크로소프트 소프트 스트리밍</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/using-quality-based-encoding-modes-streaming-video.html">스트리밍을 위한 품질 기반 인코딩 모드</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/vp6-advanced-guide.html">VP6 고급 가이드</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/vp9-guide.html">VP9 가이드</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/error-troubleshooting/index.html">오류/문제 해결 <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/error-troubleshooting/problems.html">일반적인 문제</a></li>
+                  
+                
+                  
+                    <li><a href="/error-troubleshooting/region-outages.html">지역 운영 중단</a></li>
+                  
+                
+                  
+                    <li><a href="/error-troubleshooting/when-should-i-retry-failed-jobs.html">실패한 작업을 다시 시도해야 하는 경우</a></li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/error-troubleshooting/error-codes/index.html">오류 코드 <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-akamainetstoragefilesizeerror.html">아카메인스토리지파일 크기 오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-checksummismatcherror.html">체크섬미일치 오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-dimensiontoosmallerror.html">치수작은 오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-downloadaccessdeniederror.html">다운로드액세스데인오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-downloadfailureerror.html">다운로드 실패오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-downloadtimeouterror.html">다운로드타임아웃테러</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-filenotfounderror.html">파일이름창업자 오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-inaccuratedurationerror.html">파일영구 이동오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-inaccuratedurationerror.html">부정확한 기간 오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-incompatiblewithdynamicprofileserror.html">동적 프로필과 호환되지 않습니다오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-inputfilenotfound.html">입력파일찾았습니다.</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidaccesskeyiderror.html">유효하지 않은 액세스 키오류오류입니다.</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidaudiosettingserror.html">유효하지 않음오디오 설정오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidcodeccombinationerror.html">유효하지 않은 코드조합 오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invaliddownloadedfiletypeerror.html">다운로드된 파일 유형 오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidencryptionsettingserror.html">유효하지 않은 암호화설정설정오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidfilepatherror.html">유효하지 않은 파일패더러</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidformatcodecerror.html">유효하지 않은 형식코드 작성기</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidframerateerror.html">잘못된 프레임오류입니다.</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidusernameorpassworderror.html">유효하지 않은 사용자 이름이나 암호오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidvideobitrateerror.html">유효하지 않음비디오비디오오류입니다.</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidvideosettingserror.html">유효하지 않음비디오설정오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-nomediaerror.html">미디어 오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-quicktimereferenceerror.html">빠른 시간 참조오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-remoteserverproblemerror.html">원격 서버문제오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-rtmpauthfailederror.html">RTMP인증 실패 오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-rtmpmaxstreamsxidreached.html">RTMP맥스스트림시드레이드된</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-rtmpstreamnamealreadyinuse.html">Rtmp스트림 이름미리 사용</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-s3bucketnotfounderror.html">S3버킷명설립자</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-segmentingerror.html">세그먼트화 오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-skippedsourceerror.html">건너뛰기소스오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-thumbnailerror.html">썸네일 오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-transcodingerror.html">트랜스코딩 오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-transferinvalidgranteegroupurlerror.html">전송። 유효하지 않은부여그룹오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-transferinvalidgranteeiderror.html">전송። 무효부여여여여승</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-truncatedfileerror.html">잘라낸 파일 오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unabletocreatedynamicprofileserror.html">동적 프로파일을 생성할 수 없음오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unexpecteddownloadproblemerror.html">다운로드문제오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unexpectedffmpegresult.html">분류: Ffmpegresult</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unexpectedmplayerresult.html">레이어결과</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unexpectedprogenresult.html">트프로젠결과</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unexpectedresulterror.html">결과오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unexpecteduploadproblemerror.html">로드문제 오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unexpectedx264result.html">결과X264결과</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unreadablefileerror.html">읽을 수 없는 파일오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unsupportedcodecerror.html">지원되지 않는 코드 작성기</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unsupportedencodingerror.html">지원되지 않은코드오류입니다.</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unsupportedencryptionerror.html">지원되지 않음암호화 오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unsupportedtranscodecombinationerror.html">지원되지 않는 코드 변환 조합 오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-uploadaccessdeniederror.html">업로드액세스거부 오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-uploadfailureerror.html">업로드 실패오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-uploadservernotfounderror.html">업로드서버이름창업자 오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-uploadtimeouterror.html">업로드시간 초과 오류</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-workertimeouterror.html">노동자시간 외계자</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/integration/index.html">통합 <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/integration/faq-integration-libraries.html">통합 라이브러리</a></li>
+                  
+                
+                  
+                    <li><a href="/integration/100-integration-reliability.html">100% 통합 신뢰성</a></li>
+                  
+                
+                  
+                    <li><a href="/integration/test-jobs-and-integration-mode.html">테스트 작업 및 통합 모드</a></li>
+                  
+                
+                  
+                    <li><a href="/integration/using-read-only-api-keys.html">읽기 전용 API 키 사용</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/support/index.html">지원 <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/support/brightcove-answer.html">브라이트코브 답변</a></li>
+                  
+                
+                  
+                    <li><a href="/support/viewing-brightcove-system-status-page.html">브라이트코브 시스템 상태 페이지 보기</a></li>
+                  
+                
+                  
+                    <li><a href="/support/contact-sales.html">영업팀에 문의</a></li>
+                  
+                
+                  
+                    <li><a href="/support/opening-case-with-brightcove-support.html">지원 사례 열기</a></li>
+                  
+                
+              </ul>
+            
+          
+      </nav>
+    </div>
+    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
+  <!-- bootstrap layout -->
+
+<p id="bc_veggie_burger_wrapper" style="display: none;"><img id="bc_veggie_burger" src="/assets/images/feather/menu.svg" alt="네비게이션 메뉴"/></p>
+
+<!-- search bar -->
+<div id="nav-search-box" style="margin-top: 1rem;"></div>
+<!-- in-page navigation for narrow screens -->
+<details class="centered-inpage-nav" id="centered_inpage_nav">
+  <summary><h6 class="toc">페이지 내용</h6></summary>
+  <nav id="centered_toc"></nav>
+  <ul id="centered_in_page_toc" class="list-none"></ul>
+</details>
+<!-- open in new tab/window -->
+<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="새 탭에서 열기" style="margin-top:4em;width: 1.5em;"/></a>
+
+
+
+  
+    
+
+
+<h1>지원되는 HDR 비디오 형식</h1>
+<article class="bcls-article">
+  <summary>이 항목에서는 HDR (High Dynamic Range) 비디오 형식의 Zencoder 지원에 대한 세부 정보를 제공합니다.</summary>
+
+  <section class="bcls-section">
+    <h2 id="Overview">개요</h2>
+
+    <p>HDR (High Dynamic Range) 비디오라는 용어는 일반적으로<em>비디오 형식 제품군</em> , 픽셀 값, 특정 유형의 OETF (Electo-Optical Transfer Characteristics), 색상 공간 및 인코딩 된 비디오 스트림과 함께 전달되는 특수 메타 데이터를 통해 더 넓은 범위의 색상과 밝기가 특징입니다. 이러한 형식은 일반적으로 UltraHD 비디오 콘텐츠의 제작 및 전달에 사용됩니다.</p>
+
+    <p>HDR 비디오에 대한 자세한 내용은<a href="https://www.videomaker.com/how-to/technology/what-is-hdr-video/"> HDR 비디오 란?</a>과<a href="https://en.wikipedia.org/wiki/High-dynamic-range_video">높은 동적 범위 비디오</a> .</p>
+
+    <p>현재 Zencoder에서 지원하는 특정 유형의 HDR 비디오 형식은 아래 표에 나열되어 있습니다.</p>
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">HDR 형식 지원</caption>
+      <thead class="bcls-table__head">
+        <tr>
+          <th>HDR 형식</th>
+          <th>픽셀 깊이</th>
+          <th>픽셀 범위</th>
+          <th>원색</th>
+          <th>색 공간</th>
+          <th>OETF</th>
+          <th>디스플레이 메타 데이터 마스터하기</th>
+          <th>콘텐츠 밝기 수준 메타 데이터</th>
+          <th>동적 메타 데이터</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>HLG10 <sup><strong><a href="#note1-1"> [1-1]</a></strong></sup></td>
+          <td>10</td>
+          <td>제한된</td>
+          <td>BT.2020 <sup><strong><a href="#note1-4">[1-4]</a></strong></sup></td>
+          <td>Y'C ' <sub>비</sub>씨' <sub>아르 자형</sub><sup><strong><a href="#note1-5"> [1-5]</a></strong></sup></td>
+          <td>HLG <sup><strong><a href="#note1-7"> [1-7]</a></strong></sup></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>PQ10 <sup><strong><a href="#note1-1"> [1-1]</a></strong></sup></td>
+          <td>10</td>
+          <td>제한된</td>
+          <td>BT.2020 <sup><strong><a href="#note1-4">[1-4]</a></strong></sup></td>
+          <td>Y'C ' <sub>비</sub>씨' <sub>아르 자형</sub><sup><strong><a href="#note1-5"> [1-5]</a></strong></sup></td>
+          <td>PQ <sup><strong><a href="#note1-8"> [1-8]</a></strong></sup></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>HDR10 <sup><strong><a href="#note1-1"> [1-1]</a></strong></sup></td>
+          <td>10</td>
+          <td>제한된</td>
+          <td>BT.2020 <sup><strong><a href="#note1-4">[1-4]</a></strong></sup></td>
+          <td>Y'C ' <sub>비</sub>씨' <sub>아르 자형</sub><sup><strong><a href="#note1-5"> [1-5]</a></strong></sup></td>
+          <td>PQ <sup><strong><a href="#note1-8"> [1-8]</a></strong></sup></td>
+          <td>SMPTE 2086 <sup><strong><a href="#note1-9"> [1-9]</a></strong></sup></td>
+          <td>분류: <sup><strong><a href="#note1-10">캐이</a></strong></sup></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>DolbyVision 8.1 <sup><strong><a href="#note1-2"> [1-2]</a></strong></sup></td>
+          <td>10</td>
+          <td>제한된</td>
+          <td>BT.2020 <sup><strong><a href="#note1-4">[1-4]</a></strong></sup></td>
+          <td>Y'C ' <sub>비</sub>씨' <sub>아르 자형</sub><sup><strong><a href="#note1-5"> [1-5]</a></strong></sup></td>
+          <td>PQ <sup><strong><a href="#note1-8"> [1-8]</a></strong></sup></td>
+          <td>SMPTE 2086 <sup><strong><a href="#note1-9"> [1-9]</a></strong></sup></td>
+          <td>분류: <sup><strong><a href="#note1-10">캐이</a></strong></sup></td>
+          <td>SMPTE 2094-10 <sup><strong><a href="#note1-11"> [1-11]</a></strong></sup></td>
+        </tr>
+        <tr>
+          <td>DolbyVision 5 <sup><strong><a href="#note1-3"> [1-3]</a></strong></sup></td>
+          <td>10</td>
+          <td>완전한</td>
+          <td>BT.2020 <sup><strong><a href="#note1-4">[1-4]</a></strong></sup></td>
+          <td>IC <sub>티</sub>씨<sub>피</sub><sup><strong><a href="#note1-6"> [1-6]</a></strong></sup></td>
+          <td>PQ <sup><strong><a href="#note1-8"> [1-8]</a></strong></sup></td>
+          <td></td>
+          <td></td>
+          <td>SMPTE 2094-10 <sup><strong><a href="#note1-11"> [1-11]</a></strong></sup></td>
+        </tr>
+    </table>
+    <h3>참고</h3>
+    <ul>
+      <li id="note1-1"><sup><strong>[1-1]</strong></sup> HLG10, PQ10 및 HDR10은<a href="https://ultrahdforum.org/guidelines/"> UltraHD 포럼 지침</a></li>
+      <li id="note1-2"><sup><strong>[1-2]</strong></sup> DolbyVision 8.1은 DolbyVision Profile 8을 참조하며<a href="https://www.dolby.com/us/en/technologies/dolby-vision/dolby-vision-profiles-levels.pdf"> DolbyVision 프로필 및 레벨</a>사양</li>
+      <li id="note1-3"><sup><strong>[1-3]</strong></sup> DolbyVision 5는 DolbyVision Profile 5를 의미하며<a href="https://www.dolby.com/us/en/technologies/dolby-vision/dolby-vision-profiles-levels.pdf"> DolbyVision 프로필 및 레벨</a>사양</li>
+      <li id="note1-4"><sup><strong>[1-4]</strong></sup> BT.2020은 다음에 의해 정의 된 비색계 시스템을 나타냅니다. <a href="https://www.itu.int/rec/R-REC-BT.2020/en"> ITU-R Rec. 분류: 기원전</a></li>
+      <li id="note1-5"><sup><strong>[1-5]</strong></sup> Y'C ' <sub>비</sub>씨' <sub>아르 자형</sub> Y'C '를 나타냅니다. <sub>비</sub>씨' <sub>아르 자형</sub>에 의해 정의 된 불일치 휘도 색 공간<a href="https://www.itu.int/rec/R-REC-BT.2020/en"> ITU-R Rec. 분류: 기원전</a></li>
+      <li id="note1-6"><sup><strong>[1-6]</strong></sup> IC <sub>티</sub>씨<sub>피</sub> IC를 의미<sub>티</sub>씨<sub>피</sub>에 의해 정의 된 색 공간<a href="https://www.itu.int/rec/R-REC-BT.2100/en"> ITU-R Rec. 분류: 기원전</a></li>
+      <li id="note1-7"><sup><strong>[1-7]</strong></sup> HLG는 다음에 의해 정의 된 하이브리드 로그 감마 (HLG) 전달 함수를 나타냅니다. <a href="https://www.itu.int/rec/R-REC-BT.2100/en"> ITU-R Rec. 분류: 기원전</a></li>
+      <li id="note1-8"><sup><strong>[1-8]</strong></sup> PQ는 다음에 의해 정의 된 PQ (Perceptual Quantizer) 전달 함수를 나타냅니다. <a href="https://www.itu.int/rec/R-REC-BT.2100/en"> ITU-R Rec. 분류: 기원전</a></li>
+      <li id="note1-9"><sup><strong>[1-9]</strong></sup> SMPTE 2086은 다음에 의해 정의 된 마스터 디스플레이 특성을 나타냅니다. <a href="https://ieeexplore.ieee.org/document/8353899"> SMPTE ST 2086</a></li>
+      <li id="note1-10"><sup><strong>[1-10]</strong></sup> CAE 861.3은 다음에 의해 정의 된 콘텐츠 조명 수준 매개 변수를 나타냅니다. <a href="https://standards.cta.tech/apps/group_public/project/details.php?project_id=185"> CAE 861.3</a></li>
+      <li id="note1-11"><sup><strong>[1-11]</strong></sup> SMPTE 2094-10은 다음에 의해 정의 된 DolbyVision 동적 메타 데이터를 나타냅니다. <a href="https://ieeexplore.ieee.org/document/7513370"> SMPTE ST 2094-10</a></li>
+    </ul>
+    <p>비디오 코덱 비트 스트림, 컨테이너 형식, DASH 및 HLS 스트리밍 시스템 내에서 이러한 형식의 캐리지에 대한 세부 정보는 다음 문서에서 찾을 수 있습니다.
+    <ul>
+      <li><a href="https://www.itu.int/rec/T-REC-H.265">HEVC 표준</a></li>
+      <li><a href="https://ultrahdforum.org/guidelines/">UltraHD 포럼 지침</a></li>
+      <li><a href="https://www.dolby.com/us/en/technologies/dolby-vision/dolby-vision-profiles-levels.pdf">DolbyVision 프로필 및 레벨</a></li>
+      <li><a href="https://developer.apple.com/documentation/http_live_streaming/hls_authoring_specification_for_apple_devices">Apple 장치에 대한 HLS 작성 지침</a></li>
+      <li><a href="https://dashif.org/docs/DASH-IF-IOP-v4.0-clean.pdf">구현 지침 : DASH-IF 상호 운용성 포인트</a></li>
+      <li><a href="https://cdn.cta.tech/cta/media/media/resources/standards/pdfs/cta-5001-b-final_v2.pdf">CTA-5001-B : 웹 애플리케이션 비디오 생태계 : 콘텐츠 사양</a></li>
+    </ul>
+    </p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="supported_operations">지원되는 작업</h2>
+    <p>Zencoder는 현재<em>직접 트랜스 코딩 작업</em> HDR 형식의 비디오와 함께. 즉, 입력 비디오가 특정 HDR 형식으로 컬러 그레이딩되고 인코딩 된 경우 동일한 컬러 그레이딩 및 HDR 형식 관련 메타 데이터가 출력에 유지됩니다.</p>
+    <p>다른 유형의 HDR 형식 간 변환 또는 SDR (Standard Dynamic Range) 및 HDR 형식 간의 변환은 현재 지원되지 않습니다. 원칙적으로 HDR 형식 간의 변환은 예술적 의도에 영향을 미치거나 눈에 보이는 아티팩트를 도입 할 수있는 사소한 작업입니다. 이러한 이유로 포스트 프로덕션에서 이러한 변환 작업을 전문적으로 수행하는 것이 좋습니다.</p>
+    <p>HDR 형식으로 비디오를 인코딩하려면 현재 HEVC 비디오 코덱을 사용해야하며 Main10 프로필에서 작동하며 10 비트 픽셀을 사용해야합니다. 이러한 코덱, 프로필 및 비트 심도 매개 변수는 모든 HDR 출력에 대해 정의되어야합니다. 현재 HDR 형식에 다른 코덱 / 프로필 / 비트 심도를 사용하는 것은 지원되지 않습니다.</p>
+    <p>DolbyVision 형식으로 비디오를 인코딩하려면 출력을 위해 ISOBMFF (MP4) 컨테이너 형식을 사용해야합니다. 현재 DolbyVision에서 다른 컨테이너 형식을 사용하는 것은 지원되지 않습니다.</p>
+    <p>Zencoder의 HDR 형식 인코딩은 다음을 사용하여 생성 된 정적 및 동적 출력 모두에 대해 지원됩니다. <a href="https://zencoder.support.brightcove.com/encoding-guides/cae-guide.html"> Brightcove CAE (Context-Aware Encoding)</a>과학 기술. CAE 기술을 사용하면보다 효율적인 인코딩이 가능하며<a href="https://ultrahdforum.org/guidelines/"> UltraHD 포럼 지침</a> UltraHD / HDR 콘텐츠 인코딩 용. </p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="requirements">입력 파일에 대한 요구 사항</h2>
+
+    <p>입력 비디오 파일은 적절한 색상 등급 HDR 시각적 콘텐츠를 전달하는 고품질 마스터 또는 메 자닌이어야하며 사용중인 HDR 형식을 설명하는 데 필요한 모든 메타 데이터가 제공되어야합니다.</p>
+    <p>이러한 파일의 예는 다음과 같습니다.</p>
+    <ul>
+      <li>HLG10, PQ10 및 HDR10-HEVC 코덱을 사용하여 인코딩되고 이러한 스트림 내에서 필요한 모든 HDR 정보를 전달하는 호환 비디오 스트림</li>
+      <li>포스트 프로덕션 인트라 코딩 된 메 자닌 (예 : OP1a MXF의 Apple ProRes 4444, Avid DNxHD 또는 JPEG 2000 (J2K)), 사용중인 HDR 형식 유형에 대한 추가 정보 및 추가 메타 데이터 (예 : 마스터 디스플레이 및 콘텐츠 밝기 수준) 메타 데이터)를 설명하는 데 필요</li>
+      <li>HEVC로 인코딩 된 DolbyVision 스트림은 관련 동적 메타 데이터를 전달하는 "RPU"파일과 함께 제공됩니다.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="specifying_hdr_format_parameters">HDR 형식 매개 변수 지정</h2>
+
+    <p>입력 메 자닌에 HDR 형식과 관련된 모든 메타 데이터가 포함 된 경우 이러한 모든 정보는 다음을 사용하여 출력으로 전파 될 수 있습니다. <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#preserve_hdr_metadata"><code translate="No">preserve_hdr_metadata</code></a>매개 변수.</p>
+    <p>이 방법은 다음 예에서 설명합니다.</p>
+    <pre class="line-numbers"><code class="language-json" translate="No">{ 
+  "input": "s3://mybucket/hdr_master.mp4", 
+  "outputs": [ 
+    { 
+     "video_codec": "hevc", 
+     "video_codec_profile": "main10", 
+     "video_bit_depth": 10,
+     "preserve_hdr_metadata": true
+    } 
+  ] 
+}</code></pre>
+    <p>이 방법은 HEVC 인코딩 HDR10, PQ10, anf HLG10 메 자닌에서 잘 작동합니다.</p>
+    <p>입력 메 자닌이 HDR 형식을 정확하게 설명하지 않거나 일부 정보 만 전달하는 경우 HDR 형식 매개 변수의 명시 적 사양을 사용해야합니다.</p>
+    <p>이러한 경우 Zencoder는<a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#hdr_format"><code translate="No">hdr_format</code></a>사용중인 HDR 형식의 정확한 유형과 관련 메타 데이터를 전달하는 데 필요할 수있는 몇 가지 추가 매개 변수를 설명하는 매개 변수입니다. 아래 표는 가능한 값을 나열합니다. <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#hdr_format"><code translate="No">hdr_format</code></a>매개 변수 및 지정해야하는 추가 매개 변수.</p>
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">hdr_format 세부 사항</caption>
+      <thead class="bcls-table__head">
+        <tr>
+          <th rowspan="2">HDR 형식</th>
+          <th colspan="4">Zencoder API 매개 변수 / 값</th>
+        </tr>
+        <tr>
+        <td style="white-space: nowrap;padding: .3rem;"><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#hdr_format"><code translate="No">hdr_format</code></a></td>
+        <td style="white-space: nowrap;padding: .3rem;"><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display"><code translate="No">master_display</code></a></td>
+        <td style="padding: .3rem;"><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#max_content_light_level"><code translate="No">max_content_light_level</code></a> , <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#max_frame_average_light_level"><code translate="No">max_frame_average_light_level</code></a></td>
+        <td style="white-space: nowrap;padding: .3rem;"><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#dolby_vision_rpu_url"><code translate="No">dolby_vision_rpu_url</code></a></td>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>HLG10</td>
+          <td><code translate="No">hlg</code></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>PQ10</td>
+          <td><code translate="No">pq</code></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>HDR10</td>
+          <td><code translate="No">hdr10</code></td>
+          <td>필수</td>
+          <td>필수</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>DolbyVision 8.1</td>
+          <td><code translate="No">dv8.1</code></td>
+          <td>필수</td>
+          <td>필수</td>
+          <td>필수</td>
+        </tr>
+        <tr>
+          <td>DolbyVision 5</td>
+          <td><code translate="No">dv5</code></td>
+          <td></td>
+          <td></td>
+          <td>필수</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>예를 들어, HDR10 비디오를<a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display"><code translate="No">master_display</code></a>과<a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#max_content_light_level">콘텐츠 밝기 수준</a>외부 적으로 전달되는 메타 데이터 매개 변수는 다음 명령을 사용하여 수행 할 수 있습니다.</p>
+<pre class="line-numbers"><code class="language-json" translate="No">{
+  "input": "s3://mybucket/prores_hdr_master.mov",
+  "outputs": [
+    {
+      "video_codec": "hevc", 
+      "video_codec_profile": "main10", 
+      "video_bit_depth": 10,
+      "hdr_format": "hdr10",
+      "master_display": {
+        "red": {"x": 0.708, "y": 0.292},
+        "green": {"x": 0.17, "y": 0.797},
+        "blue": {"x": 0.131, "y": 0.046},
+        "white_point": {"x": 0.31273,"y": 0.329},
+        "luminance": {"max": 1000,"min": 0.0001}
+      },
+      "max_content_light_level": 1000,
+      "max_frame_average_light_level": 180
+    }
+  ]
+}
+</code></pre>
+    <p>이 방법은 OP1a MXF에서 Apple ProRes 4444, Avid DNxHD 또는 JPEG 2000 (J2K)과 같은 코덱을 사용하여 포스트 프로덕션 메 자닌으로 작업 할 때 적합합니다.</p>
+    <p>마찬가지로 DolbyVision 콘텐츠를 트랜스 코딩 할 때 DolbyVision 콘텐츠와 관련된 동적 메타 데이터 ( "RPU"파일)는 다음을 사용하여 외부 적으로 통신 할 수 있습니다. <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#dolby_vision_rpu_url"><code translate="No">dolby_vision_rpu_url</code></a>매개 변수 :</p>
+<pre class="line-numbers"><code class="language-json" translate="No">{ 
+  "input": "s3://mybucket/dv5_master.mp4", 
+  "outputs": [ 
+    { 
+     "video_codec": "hevc", 
+     "video_codec_profile": "main10", 
+     "video_bit_depth": 10,
+     "video_color_range": "full",
+     "hdr_format": "dv5",
+     "dolby_vision_rpu_url": "s3://mubucket/dv5_master_rpu.rpu"
+    } 
+  ] 
+}</code></pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="specifying_hdr_format_parameters_with_cae">CAE로 HDR 형식 매개 변수 지정</h2>
+    <p>
+      사용할 때<a href="/encoding-guides/cae-guide.html"> Brightcove CAE (Context-Aware Encoding)</a>모든 코덱 및 HDR 형식 관련 매개 변수를 다음과 같이 지정할 수 있습니다.
+      <ul>
+        <li>레이블이 지정된 출력 매개 변수<a href="/encoding-settings/general/encoding-settings-general-output-settings.html#dynamic_profile_rendition"><code translate="No">dynamic_profile_rendition</code></a> , 또는</li>
+        <li>의 매개 변수<a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a>목적</li>
+      </ul>
+    </p>
+    <p>두 번째 방법은 더 간결하고 선호됩니다. 두 번째 방법의 사용을 보여주는 예가 아래에 제공됩니다.</p>
+<pre class="line-numbers"><code class="language-json" translate="No">{ 
+  "input": "s3://mybucket/hdr_master.mp4", 
+  "generate_dynamic_profile": true,
+  "dynamic_profile_options": 
+  {
+    "max_renditions": 6,
+    "video_codec": "hevc", 
+    "video_codec_profile": "main10", 
+    "video_bit_depth": 10,
+    "preserve_hdr_metadata": true,
+  }
+  "outputs": [ 
+    {"dynamic_profile_rendition": 1}, 
+    {"dynamic_profile_rendition": 2}, 
+    {"dynamic_profile_rendition": 3}, 
+    {"dynamic_profile_rendition": 4}, 
+    {"dynamic_profile_rendition": 5}, 
+    {"dynamic_profile_rendition": 6} 
+  ] 
+}</code></pre>
+  </section>
+</article>
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">페이지 내용</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="last-updated">
+  20209월28일에 마지막으로 업데이트한 페이지
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
+    <div class="region region-footer-top-center col-md-12">
+      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+
+        <h2>브라이트코브 지원</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://status.brightcove.com">시스템 상태</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">고객 지원 문의</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/">문서화</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+
+        <h2>교육</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://studio.support.brightcove.com/training/online-training-courses.html">온라인 강좌</a>
+          </li>
+          <li>
+            <a href="https://studio.support.brightcove.com/training/register-training.html">강좌 등록</a>
+          </li>
+          <li>
+            <a href="https://university.brightcove.com/">브라이트코브 대학교</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+
+        <h2>Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://www.brightcove.com">브라이트코브닷컴</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">연락처</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="region region-footer-bottom-center col-md-12">
+      <div class="bcls-copyright footer-menu">
+        <table>
+          <tr>
+            <td>
+              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> 브라이트코브 Inc. 모든 판권 소유.</div>
+            </td>
+            <td><a href="https://www.brightcove.com/en/legal/privacy">개인 정보 보호</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">이용 약관</a></td>
+            <td>
+              <div class="gf-links-cols footer-menu">
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</footer>
+<div id="talla_wrapper">
+  <p style="text-align: right;position: relative;"><button style="background:rgb(2, 28, 146);color:Snow;padding:.3rem;position:fixed;right:0;bottom:1em;z-index:9999999" onclick="javascript:displayChat()">궁금한 사항이 있으십니까? </button> </p>
+  <div id="talla_chat">
+</div>
+</div>
+<script>
+      
+  var searchBox = sajari.init({
+    mode: "search-box",
+    project: "1588255093746585379", // Set this to your project.
+    collection: "brightcove-documenation", // Set this to your collection.
+    instantPipeline: "autocomplete", // Pipeline used as you type
+    inputPlaceholder: "Search", // Input element placeholder
+    maxSuggestions: 5, // Maximum number of suggestions to show
+    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+  });
+  
+    searchBox("sub", "pipeline.search-sent", function (_, query) {
+      window.location = "/search.html?q=" + encodeURIComponent(query.q);
+    });
+  
+
+</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/https-fix.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/setDate.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script>
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/bcls-utils.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/local-link-fix.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/js/sajari-search-foot.js"></script>
+  
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <script src="https://assets.talla.com/latest/embeddedjs/talla.js"></script>
+  <script src="/assets/js/talla-init.js"></script>
+  <!-- <script src="https://sdk.amazonaws.com/js/aws-sdk-2.677.0.min.js"></script> -->
+</body>
+
+</html>
