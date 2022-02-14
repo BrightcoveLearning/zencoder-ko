@@ -1,0 +1,153 @@
+
+---
+title: 형식 및 코덱 설정
+description:이 항목에는 비디오 형식 및 코덱과 관련된 인코딩 설정에 대한 세부 정보가 포함되어 있습니다.
+parent: Formats and Codec Settings 
+grandparent: Encoding Settings
+layout: staging
+---
+ <h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+
+  <section class="bcls-section">
+    <h2 id="format">체재</h2>
+    <code translate="No">format:String</code>
+
+    <p><strong>API 버전:</strong> V1, V2</p>
+
+    <p><strong>상위: </strong><a href="/encoding-settings/general/encoding-settings-job.html#outputs">출력</a></p>
+
+    <p><strong>기본:</strong> 출력 파일 이름과 비디오 또는 오디오 코덱에 의해 결정됩니다. 그렇지 않으면: mp4 (표준 출력의 경우); ts (세그먼트 출력의 경우).</p>
+
+    <p><strong>유효한 값:</strong> 3gp, aac, ac3, ec3, flv, m4f, mj2, mkv, mp3, mp4, mxf, ogg, ts, webm 및 wmv</p>
+
+    <p><strong>호환 가능한 작업 유형:</strong> 모두</p>
+
+    <p><strong>예:</strong> webm</p>
+
+    <p><strong>기술:</strong></p>
+
+    <p>사용할 출력 컨테이너 형식입니다.</p>
+
+    <p>일부 컨테이너에는 여러 개의 유효한 파일 확장자가 있습니다. 일반적으로 오디오/비디오 파일에는 “f4v”, “ogv” 및 “m4v”와 같은 이름이 사용되며 오디오 전용 파일에는 “f4a”, “m4a” 및 “oga”가 사용되지만 이는 적용되지 않습니다. 마찬가지로 "f4v"및 "f4a"는 Flash Video에서 재생하도록 설계된 mp4 내용에 자주 사용되지만 이는 단지 관례 일뿐입니다.</p>
+
+    <p>적합성:</p>
+
+    <ul>
+      <li>mp4는<code translate="No">h264</code> (기본값), <code translate="No">hevc</code><code translate="No">mpeg4</code> , 및 와 호환됩니다. <code translate="No">AV1</code>비디오 및 aac (기본값), mp3, ac3 및 eac3 오디오를 포함합니다. 유효한 값 및 파일 확장자: mp4, m4a, m4v, f4v, f4a, m4b, m4r, f4b</li>
+      <li>m4f는 다음과 호환됩니다. <code translate="No">h264</code>그리고<code translate="No">hevc</code>비디오 및 aac, ac3 및 eac3 오디오.</li>
+      <li>ogg는<code translate="No">theora</code>비디오 및 보비스 오디오와 호환됩니다. 유효한 값 및 파일 확장명: ogg, 오가, ogv, ogx</li>
+      <li>webm은 vp8 (기본값), vp9 및 AV1 비디오 및 vorbis 오디오와 호환됩니다. 유효한 값 및 파일 확장명: webm</li>
+      <li>3gp는<code translate="No">mpeg4</code> (기본값) 및<code translate="No">h264</code>비디오, aac (기본값) 및 mp3 오디오와 호환됩니다. 유효한 값 및 파일 확장명: 3gp, 3gp2, 3g2, 3gpp, 3gpp2. 3gp 형식은 mp4 파일 확장자를 사용할 수도 있습니다.</li>
+      <li>flv는 vp6 (기본값) 및<code translate="No">h264</code>비디오, aac (기본값) 및 mp3 오디오와 호환됩니다. 유효한 값 및 파일 확장명: flv</li>
+      <li>ts는<code translate="No">h264</code>비디오 및 aac (기본값), mp3 또는 ac3 오디오와 호환됩니다. 유효한 값 및 파일 확장명: ts</li>
+      <li>mkv는<code translate="No">h264</code>비디오 및 aac (기본값), mp3, ac3 또는 eac3 오디오와 호환됩니다. 유효한 값 및 파일 확장명: mkv</li>
+      <li>wmv는 wmv 비디오 및 wma (기본값) 또는 mp3 오디오와 호환됩니다. 유효한 값 및 파일 확장명: wmv, wma</li>
+      <li>aac는 aac 오디오와 호환되며 비디오는 없습니다. 유효한 값 및 파일 확장명: aac</li>
+      <li>mp3는 mp3 오디오와 호환되며 비디오는 없습니다. 유효한 값 및 파일 확장명: mp3</li>
+      <li>ac3는 ac3 오디오와 호환되며 비디오는 없습니다. 유효한 값 및 파일 확장명: ac3</li>
+      <li>ec3는 eac3 오디오와 호환되며 비디오는 없습니다. 유효한 값 및 파일 확장명: ec3</li>
+      <li>mj2는<code translate="No">jp2</code>비디오 및 aac 오디오와 호환됩니다. 유효한 값 및 파일 확장명: mj2, mjp2.</li>
+      <li>mxf는<code translate="No">h264</code>비디오 및 pcm 오디오와 호환됩니다. 유효한 값 및 파일 확장명: mxf.</li>
+    </ul>
+    <pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "format": "webm"
+    }
+  ]
+}</code></pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="video_codec">video_codec</h2>
+    <code translate="No">video_codec:String</code>
+
+    <p><strong>API 버전:</strong> V1, V2</p>
+
+    <p><strong>상위: </strong><a href="/encoding-settings/general/encoding-settings-job.html#outputs">출력</a></p>
+
+    <p><strong>기본:</strong> 형식, 프로필 또는<a href="#audio_codec"> audio_codec 에 의해 결정됩니다</a> . <code translate="No">h264</code>제공되지 않은 경우.</p>
+
+    <p><strong>유효한 값: </strong><code translate="No">h264</code> , <code translate="No">hevc</code> , <code translate="No">av1</code> , <code translate="No">jp2</code> , <code translate="No">mpeg4</code> , <code translate="No">theora</code> , vp6,vp8, vp9 및 wmv</p>
+
+    <p><strong>호환 가능한 작업 유형:</strong> 모두</p>
+
+    <p><strong>예:</strong> vp8</p>
+
+    <p><strong>기술:</strong></p>
+
+    <p>사용할 출력 비디오 코덱입니다. Zencoder는 현재 다음 코덱을 지원합니다. <code translate="No">h264</code> (기본값), <code translate="No">hevc</code> , <code translate="No">jp2</code> , <code translate="No">theora</code><code translate="No">vp6</code> , <code translate="No">vp8</code> , <code translate="No">vp9</code> , <code translate="No">mpeg4</code> , 및<code translate="No">wmv</code> .</p>
+
+    <p>적합성:</p>
+
+    <ul>
+      <li></li>
+      <li><code translate="No">h264</code><code translate="No">aac</code> (기본값) 및<code translate="No">mp3</code>오디오 및<code translate="No">mp4</code> (기본값) <code translate="No">m4f</code> , <code translate="No">flv</code> , 또는<code translate="No">3gp</code>형식</li>
+      <li>hevc는 aac (기본값) 또는 mp3 오디오 및 mp4 또는 m4f 형식과 호환됩니다.</li>
+      <li>vp9는 vorbis 오디오 및 webm 형식과 호환됩니다.</li>
+      <li>vp8은 vorbis 오디오 및 webm 형식과 호환됩니다.</li>
+      <li>vp6은 mp3 (기본값) 또는 aac 오디오 및 flv 형식과 호환됩니다.</li>
+      <li>theora는 vorbis 오디오 및 ogg 형식과 호환됩니다.</li>
+      <li>mpeg4는 aac (기본값) 및 mp3 오디오 및 mp4 (기본값) 또는 3gp 형식과 호환됩니다.</li>
+      <li>wmv는 wma (기본값) 또는 mp3 오디오 및 wmv 형식과 호환됩니다.</li>
+      <li>jp2는 pcm 오디오 및 mj2 형식과 호환됩니다.</li>
+    </ul>
+    <pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "video_codec": "vp8"
+    }
+  ]
+}</code></pre>
+
+    <p><strong>참고: </strong><a href="#audio_codec">audio_코덱</a>및<a href="#format">형식</a></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="audio_codec">audio_codec</h2>
+    <code translate="No">audio_codec:String</code>
+
+    <p><strong>API 버전:</strong> V1, V2</p>
+
+    <p><strong>상위: </strong><a href="/encoding-settings/general/encoding-settings-job.html#outputs">출력</a></p>
+
+    <p><strong>기본:</strong> 형식, 프로필 또는<a href="#video_codec"> video_codec 에 의해 결정됩니다</a> . aac가 제공되지 않으면</p>
+
+    <p><strong>유효한 값:</strong> aac, ac3, amr, av1, eac3, mp3, PCM, 보비스 및 wma</p>
+
+    <p><strong>호환 가능한 작업 유형:</strong> 모두</p>
+
+    <p><strong>예:</strong> mp3</p>
+
+    <p><strong>기술:</strong></p>
+
+    <p>사용할 오디오 코덱입니다. 기본 코덱은 선택한 비디오 코덱 및 형식에 따라 다릅니다.</p>
+
+    <p>MP4 컨테이너의 MP3 오디오는 H.264 비디오 콘텐츠와 함께 유효하지만 Quicktime에서는 재생되지 않습니다.</p>
+
+    <p>적합성:</p>
+
+    <ul>
+      <li>aac는<code translate="No">h264</code>비디오 (mp4, m4f, 3gp 또는 flv 형식), <code translate="No">mpeg4</code>비디오 (mp4 또는 3gp 형식) 및 vp6 (flv 형식) 과 호환됩니다.</li>
+      <li>vorbis는 호환 vp8 비디오 (webm 형식) 및<code translate="No">theora</code>비디오 (ogg 형식)</li>
+      <li>wma는 wmv 비디오 및 wmv 형식과 호환됩니다.</li>
+      <li>mp3는<code translate="No">h264</code>비디오 (mp4, 3gp 또는 flv 형식) 및 wmv 비디오 (wmv 형식) 와 호환됩니다. mp3 <code translate="No">h264</code> , 및 mp4는 퀵타임에서 재생되지 않습니다.</li>
+      <li>pcm는<code translate="No">h264</code>비디오 및 mxf 형식과 호환됩니다.</li>
+    </ul>
+    <pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "audio_codec": "mp3"
+    }
+  ]
+}</code></pre>
+
+    <p><strong>참고: </strong><a href="#audio_codec">audio_코덱</a>및<a href="#format">형식</a></p>
+  </section>
+</article>

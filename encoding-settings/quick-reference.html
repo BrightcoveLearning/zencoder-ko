@@ -1,671 +1,24 @@
-﻿<!doctype html>
-<html lang="ko">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="인코딩 설정을 한 눈에 볼 수 있습니다.">
-
-  <title>인코딩 설정 빠른 참조</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&amp;display=swap">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
-  <link rel="stylesheet" href="/assets/css/local.css">
-  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&display=swap">
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
-  <script src="/assets/js/sajari-head.js"></script>
-</head>
-
-<body class="body">
-
-<header>
-  <div class="div-header">
-    <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/Zencoder_Logo.svg" alt="제품 로고" style="max-height: 100px;max-width: 232px;"/></a>
-<!-- GTranslate: https://gtranslate.io/ -->
-<select onchange="doGTranslate(this);"><option value="">언어 선택</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
-
-<script>
-/* <![CDATA[ */
-function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
-/* ]]> */
-</script>
-
-    
-
-
-    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?"><img src="https://support.brightcove.com/site-assets/images/site/support.png" alt="지원"/> 고객 지원 문의</a> <span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/"><img src="https://support.brightcove.com/site-assets/images/site/status.png" alt="시스템 상태"/> 시스템 상태</a></span> <br/>
-    
-  </div>
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb arr-right">
-      
-      <li class="breadcrumb-item"><a href="/">홈</a></li>
-      
-      
-      
-      <li class="breadcrumb-item"><a href="/encoding-settings/">인코딩 설정</a></li>
-      
-      <li class="breadcrumb-item active" aria-current="page">인코딩 설정 빠른 참조</li>
-    </ol>
-  </nav>
-</header>
-<div class="container">
-    <div class="row">
-      <div class="col-sm-3 left-side-bar">
-        <select id="site_select" class="bcls-select" style="margin-right: 1rem;">
-					<option value="">기타 브라이트코브 문서</option>
-					
-						
-							<option value="https://support.brightcove.com">설명서 홈</option>
-						
-					
-						
-							<option value="https://audience.support.brightcove.com">브라이트코브 대상</option>
-						
-					
-						
-							<option value="https://beacon.support.brightcove.com">브라이트코브 비콘</option>
-						
-					
-						
-							<option value="https://campaign.support.brightcove.com">브라이트코브 캠페인</option>
-						
-					
-						
-							<option value="https://engage.support.brightcove.com">브라이트코브 참여</option>
-						
-					
-						
-							<option value="https://live.support.brightcove.com">Brightcove Live</option>
-						
-					
-						
-							<option value="https://gallery.support.brightcove.com">Brightcove Gallery</option>
-						
-					
-						
-							<option value="https://ssai.support.brightcove.com">Brightcove SSAI</option>
-						
-					
-						
-							<option value="https://social.support.brightcove.com">브라이트코브 소셜</option>
-						
-					
-						
-							<option value="https://studio.support.brightcove.com">비디오 클라우드 스튜디오</option>
-						
-					
-						
-							<option value="https://player.support.brightcove.com">브라이트코브 플레이어 개발</option>
-						
-					
-						
-							<option value="https://apis.support.brightcove.com">비디오 클라우드 플랫폼 API</option>
-						
-					
-						
-							<option value="https://sdks.support.brightcove.com">비디오 클라우드 디바이스 SDK</option>
-						
-					
-						
-							<option value="https://integrations.support.brightcove.com">통합 및 CMS 커넥터</option>
-						
-					
-						
-							<option value="https://general.support.brightcove.com">비디오 클라우드 일반 정보</option>
-						
-					
-						
-							<option value="https://zencoder.support.brightcove.com">Zencoder</option>
-						
-					
-				</select>
-        <nav class="sidenav" id="side_nav">
-          
-            
-            <h5><a href="/index.html">홈</a></h5>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/getting-started/index.html">시작하기 <strong>+</strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/getting-started/overview-zencoder.html">개요</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/quick-start-zencoder.html">빠른 시작</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/getting-api-key.html">API 키 가져오기</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/output-settings.html">출력 설정</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/creating-multiple-outputs.html">다중 출력 생성</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/general-information/index.html">일반 정보 <strong>+</strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/general-information/faq-basics.html">기본 사항</a></li>
-                  
-                
-                  
-                    <li><a href="/general-information/faq-codecs-and-formats.html">코덱 및 형식</a></li>
-                  
-                
-                  
-                    <li><a href="/general-information/faq-encoding.html">인코딩</a></li>
-                  
-                
-                  
-                    <li><a href="/general-information/faq-file-transfers.html">파일 전송</a></li>
-                  
-                
-                  
-                    <li><a href="/general-information/faq-zencoder-pricing.html">Zencoder 가격 책정</a></li>
-                  
-                
-                  
-                    <li><a href="/general-information/faq-rate-limiting.html">속도 제한</a></li>
-                  
-                
-                  
-                    <li><a href="/general-information/supported-video-and-audio-formats-codecs-and-containers.html">지원되는 비디오 및 오디오 형식</a></li>
-                  
-                
-                  
-                    <li><a href="/general-information/overview-context-aware-encoding.html">개요: 컨텍스트 인식 인코딩</a></li>
-                  
-                
-                  
-                    <li><a href="/general-information/getting-notifications-when-videos-are-finished.html">비디오 완료 시 알림 받기</a></li>
-                  
-                
-                  
-                    <li><a href="/general-information/how-zencoder-saves-your-files-when-uploads-fail.html">업로드 실패 시 Zencoder가 파일을 저장하는 방법</a></li>
-                  
-                
-                  
-                    <li><a href="/general-information/using-zencoder-s3.html">S3에서 젠코더 사용</a></li>
-                  
-                
-                  
-                    <li><a href="/general-information/using-zencoder-azure.html">Azure에서 젠코더 사용</a></li>
-                  
-                
-                  
-                    <li><a href="/general-information/using-zencoder-google-cloud-platform.html">Google 클라우드 스토리지에서 Zencoder를 사용하기</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/references/index.html">참고 문헌 <strong>+</strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/references/reference.html">API 참조</a></li>
-                  
-                
-                  
-                    <li><a href="/references/known-issues.html">알려진 문제</a></li>
-                  
-                
-                  
-                    <li><a href="/references/release-notes.html">제품 업데이트</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/encoding-settings/index.html">인코딩 설정 <strong>+</strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li class="submenu-header">
-                      <a href="/encoding-settings/general/index.html">일반 설정 <strong>+</strong></a>
-                      <ul class="sidenav-subsubmenu" style="display:none;">
-                        
-                        <li><a href="/encoding-settings/general/encoding-settings-job.html">작업 설정</a></li>
-                        
-                        <li><a href="/encoding-settings/general/encoding-settings-general-output-settings.html">일반 출력 설정</a></li>
-                        
-                        <li><a href="/encoding-settings/general/cae-settings.html">CAE 설정</a></li>
-                        
-                        <li><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html">조건부 출력 설정</a></li>
-                        
-                        <li><a href="/encoding-settings/general/encoding-settings-notifications.html">알림 설정</a></li>
-                        
-                      </ul>
-                    </li>
-                  
-                
-                  
-                    <li class="submenu-header">
-                      <a href="/encoding-settings/general-audio-video/index.html">오디오/비디오 설정 <strong>+</strong></a>
-                      <ul class="sidenav-subsubmenu" style="display:none;">
-                        
-                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-audio.html">오디오 설정</a></li>
-                        
-                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-audio-processing.html">오디오 처리 설정</a></li>
-                        
-                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-video.html">비디오 설정</a></li>
-                        
-                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html">비디오 처리 설정</a></li>
-                        
-                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-broadcast.html">브로드캐스트 설정</a></li>
-                        
-                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-frame-rate.html">프레임 속도 설정</a></li>
-                        
-                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html">요율 제어 설정</a></li>
-                        
-                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-resolution.html">해상도 설정</a></li>
-                        
-                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html">세그먼트화된 스트리밍 설정</a></li>
-                        
-                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-transmuxing.html">변환 설정</a></li>
-                        
-                      </ul>
-                    </li>
-                  
-                
-                  
-                    <li class="submenu-header">
-                      <a href="/encoding-settings/formats-codecs/index.html">형식 및 코덱 설정 <strong>+</strong></a>
-                      <ul class="sidenav-subsubmenu" style="display:none;">
-                        
-                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html">형식 및 코덱 설정</a></li>
-                        
-                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-aac.html">AAC 설정</a></li>
-                        
-                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-flv.html">FLV 설정</a></li>
-                        
-                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html">HDR 설정</a></li>
-                        
-                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html">H.264 설정</a></li>
-                        
-                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-mp4.html">MP4 설정</a></li>
-                        
-                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html">VP6 설정</a></li>
-                        
-                      </ul>
-                    </li>
-                  
-                
-                  
-                    <li class="submenu-header">
-                      <a href="/encoding-settings/assets/index.html">미디어 에셋 설정 <strong>+</strong></a>
-                      <ul class="sidenav-subsubmenu" style="display:none;">
-                        
-                        <li><a href="/encoding-settings/assets/encoding-settings-captions.html">캡션 설정</a></li>
-                        
-                        <li><a href="/encoding-settings/assets/encoding-settings-clips.html">클립 설정</a></li>
-                        
-                        <li><a href="/encoding-settings/assets/encoding-settings-thumbnails.html">썸네일 설정</a></li>
-                        
-                        <li><a href="/encoding-settings/assets/encoding-settings-watermarks.html">워터마크 설정</a></li>
-                        
-                      </ul>
-                    </li>
-                  
-                
-                  
-                    <li class="submenu-header">
-                      <a href="/encoding-settings/content-protection/index.html">컨텐츠 보호 설정 <strong>+</strong></a>
-                      <ul class="sidenav-subsubmenu" style="display:none;">
-                        
-                        <li><a href="/encoding-settings/content-protection/encoding-settings-encryption.html">암호화 설정</a></li>
-                        
-                        <li><a href="/encoding-settings/content-protection/encoding-settings-decryption.html">암호 해독 설정</a></li>
-                        
-                        <li><a href="/encoding-settings/content-protection/encoding-settings-drm.html">DRM 설정</a></li>
-                        
-                      </ul>
-                    </li>
-                  
-                
-                  
-                    <li class="submenu-header">
-                      <a href="/encoding-settings/sources-destinations/index.html">원본/대상 설정 <strong>+</strong></a>
-                      <ul class="sidenav-subsubmenu" style="display:none;">
-                        
-                        <li><a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html">S3 설정</a></li>
-                        
-                        <li><a href="/encoding-settings/sources-destinations/encoding-settings-aspera.html">아스페라 설정</a></li>
-                        
-                      </ul>
-                    </li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/encoding-guides/index.html">인코딩 안내선 <strong>+</strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/encoding-guides/advanced-audio-mapping-guide.html">오디오 매핑 가이드</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/as11-mxf.html">AS-11-MXF 가이드</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/avc-intra-guide.html">AVC-인트라 가이드</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/cae-guide.html">CAE 가이드</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/creating-mp4-and-hls-outputs-together.html">트랜스머싱 가이드</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/dash-streaming-and-playlists.html">DASH 스트리밍 및 재생 목록</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/h264-advanced-guide.html">H.264 고급 가이드</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/hdr10-video-output.html">지원되는 HDR 비디오 형식</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/hevch265-guide.html">HEVC/H.265 가이드</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/highwinds-smil.html">하이윈즈 SMIL 가이드</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/html5-encoding.html">HTML5 인코딩</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/http-live-segmented-streaming-and-playlists.html">HLS 스트리밍 및 재생 목록</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/http-live-streaming-using-fragmented-mp4.html">조각난 MP4를 사용하는 HLS</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/iosmobile-encoding.html">iOS/모바일 인코딩 가이드</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/microsoft-smooth-streaming.html">마이크로소프트 소프트 스트리밍</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/using-quality-based-encoding-modes-streaming-video.html">스트리밍을 위한 품질 기반 인코딩 모드</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/vp6-advanced-guide.html">VP6 고급 가이드</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/vp9-guide.html">VP9 가이드</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/error-troubleshooting/index.html">오류/문제 해결 <strong>+</strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/error-troubleshooting/problems.html">일반적인 문제</a></li>
-                  
-                
-                  
-                    <li><a href="/error-troubleshooting/region-outages.html">지역 운영 중단</a></li>
-                  
-                
-                  
-                    <li><a href="/error-troubleshooting/when-should-i-retry-failed-jobs.html">실패한 작업을 다시 시도해야 하는 경우</a></li>
-                  
-                
-                  
-                    <li class="submenu-header">
-                      <a href="/error-troubleshooting/error-codes/index.html">오류 코드 <strong>+</strong></a>
-                      <ul class="sidenav-subsubmenu" style="display:none;">
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-akamainetstoragefilesizeerror.html">아카메인스토리지파일 크기 오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-checksummismatcherror.html">체크섬미일치 오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-dimensiontoosmallerror.html">치수작은 오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-downloadaccessdeniederror.html">다운로드액세스데인오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-downloadfailureerror.html">다운로드 실패오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-downloadtimeouterror.html">다운로드타임아웃테러</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-filenotfounderror.html">파일이름창업자 오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-inaccuratedurationerror.html">파일영구 이동오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-inaccuratedurationerror.html">부정확한 기간 오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-incompatiblewithdynamicprofileserror.html">동적 프로필과 호환되지 않습니다오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-inputfilenotfound.html">입력파일찾았습니다.</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-invalidaccesskeyiderror.html">유효하지 않은 액세스 키오류오류입니다.</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-invalidaudiosettingserror.html">유효하지 않음오디오 설정오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-invalidcodeccombinationerror.html">유효하지 않은 코드조합 오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-invaliddownloadedfiletypeerror.html">다운로드된 파일 유형 오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-invalidencryptionsettingserror.html">유효하지 않은 암호화설정설정오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-invalidfilepatherror.html">유효하지 않은 파일패더러</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-invalidformatcodecerror.html">유효하지 않은 형식코드 작성기</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-invalidframerateerror.html">잘못된 프레임오류입니다.</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-invalidusernameorpassworderror.html">유효하지 않은 사용자 이름이나 암호오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-invalidvideobitrateerror.html">유효하지 않음비디오비디오오류입니다.</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-invalidvideosettingserror.html">유효하지 않음비디오설정오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-nomediaerror.html">미디어 오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-quicktimereferenceerror.html">빠른 시간 참조오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-remoteserverproblemerror.html">원격 서버문제오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-rtmpauthfailederror.html">RTMP인증 실패 오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-rtmpmaxstreamsxidreached.html">RTMP맥스스트림시드레이드된</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-rtmpstreamnamealreadyinuse.html">Rtmp스트림 이름미리 사용</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-s3bucketnotfounderror.html">S3버킷명설립자</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-segmentingerror.html">세그먼트화 오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-skippedsourceerror.html">건너뛰기소스오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-thumbnailerror.html">썸네일 오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-transcodingerror.html">트랜스코딩 오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-transferinvalidgranteegroupurlerror.html">전송። 유효하지 않은부여그룹오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-transferinvalidgranteeiderror.html">전송። 무효부여여여여승</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-truncatedfileerror.html">잘라낸 파일 오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-unabletocreatedynamicprofileserror.html">동적 프로파일을 생성할 수 없음오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-unexpecteddownloadproblemerror.html">다운로드문제오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-unexpectedffmpegresult.html">분류: Ffmpegresult</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-unexpectedmplayerresult.html">레이어결과</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-unexpectedprogenresult.html">트프로젠결과</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-unexpectedresulterror.html">결과오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-unexpecteduploadproblemerror.html">로드문제 오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-unexpectedx264result.html">결과X264결과</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-unreadablefileerror.html">읽을 수 없는 파일오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-unsupportedcodecerror.html">지원되지 않는 코드 작성기</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-unsupportedencodingerror.html">지원되지 않은코드오류입니다.</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-unsupportedencryptionerror.html">지원되지 않음암호화 오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-unsupportedtranscodecombinationerror.html">지원되지 않는 코드 변환 조합 오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-uploadaccessdeniederror.html">업로드액세스거부 오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-uploadfailureerror.html">업로드 실패오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-uploadservernotfounderror.html">업로드서버이름창업자 오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-uploadtimeouterror.html">업로드시간 초과 오류</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-workertimeouterror.html">노동자시간 외계자</a></li>
-                        
-                      </ul>
-                    </li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/integration/index.html">통합 <strong>+</strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/integration/faq-integration-libraries.html">통합 라이브러리</a></li>
-                  
-                
-                  
-                    <li><a href="/integration/100-integration-reliability.html">100% 통합 신뢰성</a></li>
-                  
-                
-                  
-                    <li><a href="/integration/test-jobs-and-integration-mode.html">테스트 작업 및 통합 모드</a></li>
-                  
-                
-                  
-                    <li><a href="/integration/using-read-only-api-keys.html">읽기 전용 API 키 사용</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/support/index.html">지원 <strong>+</strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    
-                  
-                
-                  
-                    <li><a href="/support/viewing-brightcove-system-status-page.html">브라이트코브 시스템 상태 페이지 보기</a></li>
-                  
-                
-                  
-                    <li><a href="/support/contact-sales.html">영업팀에 문의</a></li>
-                  
-                
-                  
-                    <li><a href="/support/opening-case-with-brightcove-support.html">지원 사례 열기</a></li>
-                  
-                
-              </ul>
-            
-          
-      </nav>
-    </div>
-    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
-  <!-- bootstrap layout -->
-
-<p id="bc_veggie_burger_wrapper" style="display: none;"><img id="bc_veggie_burger" src="/assets/images/feather/menu.svg" alt="네비게이션 메뉴"/></p>
-
-<!-- search bar -->
-<div id="nav-search-box" style="margin-top: 1rem;"></div>
-<!-- in-page navigation for narrow screens -->
-<details class="centered-inpage-nav" id="centered_inpage_nav">
-  <summary><h6 class="toc">페이지 내용</h6></summary>
-  <nav id="centered_toc"></nav>
-  <ul id="centered_in_page_toc" class="list-none"></ul>
-</details>
-<!-- open in new tab/window -->
-<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="새 탭에서 열기" style="margin-top:4em;width: 1.5em;"/></a>
-
-
-
-  
-    
-
-
+---
+title: 인코딩 설정 빠른 참조
+description:인코딩 설정을 한 눈에 볼 수 있습니다.
+parent: Encoding Settings
+---
 <style>
-  .bcls-table td>a>code {
-    font-size: .9rem;
-    white-space: nowrap;
-  }
+  .bcls-테이블 td&gt;a&gt;코드{ font-size: .9rem; white-space: nowrap; }
 </style>
 <article class="bcls-article">
   <h1>인코딩 설정</h1>
-  <summary>이 항목에서는 모든 인코딩 설정 표와 각 설정에 대한 자세한 안내서에 대한 링크를 제공합니다.</summary>
+  <summary>이 항목에서는 각 설정에 대한 자세한 가이드에 대한 링크와 함께 모든 인코딩 설정에 대한 표를 제공합니다.</summary>
   <section class="bcls-section">
-    <h2 id="job">직무</h2>
+    <h2 id="job">일</h2>
 
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
@@ -677,17 +30,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>CAE를 사용하면 이러한 출력의 출력 수와 매개 변수가 각 입력 파일에 대해 동적으로 변경될 수 있습니다. Dynamic_profile_options 설정은 변환을 만드는 방법을 정의합니다.</td>
+          <td>CAE를 사용하면 이러한 출력의 출력 수와 매개 변수가 각 입력 파일에 대해 동적으로 변경 될 수 있습니다. dynamic_profile_options 설정은 변환을 만드는 방법을 정의합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-job.html#generate_dynamic_profile"><code translate="No">generate_dynamic_profile</code></a></td>
-          <td>거짓</td>
-          <td>CAE를 사용하면 이러한 출력의 출력 수와 매개 변수가 각 입력 파일에 대해 동적으로 변경될 수 있습니다.</td>
+          <td>그릇된</td>
+          <td>CAE를 사용하면 이러한 출력의 출력 수와 매개 변수가 각 입력 파일에 대해 동적으로 변경 될 수 있습니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-job.html#input"><code translate="No">input</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>우리가 코드 변환 파일을 다운로드 할 수있는 HTTP, S3, 클라우드 파일, GCS, FTP, FTPS, SFTP, 푸른, 또는 아스페라 URL.</td>
+          <td>트랜스 코딩 할 파일을 다운로드 할 수있는 HTTP, S3, Cloud Files, GCS, FTP, FTPS, SFTP, Azure 또는 Aspera URL.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-job.html#outputs"><code translate="No">outputs</code></a></td>
@@ -697,22 +50,22 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-job.html#region"><code translate="No">region</code></a></td>
           <td>우리</td>
-          <td>파일이 처리되는 영역입니다. 미국, 유럽, 아시아 또는 호주</td>
+          <td>파일이 처리되는 리전: 미국, 유럽, 아시아 또는 호주.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-job.html#test"><code translate="No">test</code></a></td>
-          <td>거짓</td>
+          <td>그릇된</td>
           <td>작업에 대해 테스트 모드 (“통합 모드”) 를 활성화합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-job.html#private"><code translate="No">private</code></a></td>
-          <td>거짓</td>
-          <td>작업에 대한 개인 정보 모드를 활성화합니다.</td>
+          <td>그릇된</td>
+          <td>작업에 대한 개인 정보 보호 모드를 활성화합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-job.html#download_connections"><code translate="No">download_connections</code></a></td>
           <td>5</td>
-          <td>다운로드 가속을 위해 여러 개의 동시 연결을 사용합니다 (경우에 따라).</td>
+          <td>다운로드 가속화를 위해 여러 동시 연결을 활용합니다 (일부 상황에서).</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-job.html#pass_through"><code translate="No">pass_through</code></a></td>
@@ -721,28 +74,28 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-job.html#mock"><code translate="No">mock</code></a></td>
-          <td>거짓</td>
-          <td>조롱 된 작업 요청을 보냅니다.</td>
+          <td>그릇된</td>
+          <td>모의 작업 요청을 보냅니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-job.html#grouping"><code translate="No">grouping</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>이 작업에 대한 보고서 그룹화</td>
+          <td>이 작업에 대한 보고서 그룹입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-job.html#aspera_transfer_policy"><code translate="No">aspera_transfer_policy</code></a></td>
-          <td>공정</td>
+          <td>공정한</td>
           <td>Aspera 파일 전송에 사용 가능한 대역폭을 할당하는 방법.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-job.html#transfer_minimum_rate"><code translate="No">transfer_minimum_rate</code></a></td>
           <td>1000</td>
-          <td>데이터 전송 최소의 목표 속도 (Kbps) 입니다.</td>
+          <td>최소 데이터 전송 속도 (Kbps)입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-job.html#transfer_maximum_rate"><code translate="No">transfer_maximum_rate</code></a></td>
           <td>250000</td>
-          <td>데이터 전송 최대값에 대한 목표 속도 (Kbps) 입니다.</td>
+          <td>데이터 전송 최대 값에 대한 목표 속도 (Kbps)입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-job.html#expected_md5_checksum"><code translate="No">expected_md5_checksum</code></a></td>
@@ -752,7 +105,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-job.html#credentials"><code translate="No">credentials</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>저장된 자격 증명을 별명으로 참조합니다.</td>
+          <td>별명으로 저장된 자격 증명을 참조합니다.</td>
         </tr>
       </tbody>
     </table>
@@ -763,16 +116,16 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-general-output-settings.html#type"><code translate="No">type</code></a></td>
           <td>표준</td>
-          <td>출력 할 파일의 유형입니다.</td>
+          <td>출력 할 파일 유형입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-general-output-settings.html#label"><code translate="No">label</code></a></td>
@@ -782,22 +135,22 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-general-output-settings.html#dynamic_profile_rendition"><code translate="No">dynamic_profile_rendition</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>dynamic_profile_rendition 설정은 이 출력에 동적으로 생성된 CAE 프로파일의 설정, 특히 설정을 사용할 프로파일의 변환을 사용하도록 지정합니다.</td>
+          <td>dynamic_profile_rendition 설정은 이 출력에서 동적으로 생성된 CAE 프로파일의 설정과 특히 설정을 사용할 프로파일의 변환을 사용하도록 지정합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-general-output-settings.html#url"><code translate="No">url</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>트랜스코딩된 파일을 넣을 S3, 클라우드 파일, GCS, FTP, FTPS, SFTP, 아스페라, 푸른, HTTP 또는 RTMP URL입니다.</td>
+          <td>트랜스 코딩 된 파일을 넣을 S3, Cloud Files, GCS, FTP, FTPS, SFTP, Aspera, Azure, HTTP 또는 RTMP URL.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-general-output-settings.html#secondary_url"><code translate="No">secondary_url</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>우리는 트랜스코딩된 파일을 넣을 S3, 클라우드 파일, GCS, FTP, FTPS, SFTP, HTTP, RTMP, 아스페라 또는 푸른 URL.</td>
+          <td>트랜스 코딩 된 파일을 넣을 S3, Cloud Files, GCS, FTP, FTPS, SFTP, HTTP, RTMP, Aspera 또는 Azure URL.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-general-output-settings.html#base_url"><code translate="No">base_url</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>파일 이름 없이 트랜스코딩된 파일을 넣을 기본 S3, 클라우드 파일, GCS, FTP, FTPS, SFTP, Azure 또는 아스페라 디렉터리 URL입니다.</td>
+          <td>파일 이름없이 트랜스 코딩 된 파일을 넣을 기본 S3, Cloud Files, GCS, FTP, FTPS, SFTP, Azure 또는 Aspera 디렉터리 URL.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-general-output-settings.html#filename"><code translate="No">filename</code></a></td>
@@ -807,12 +160,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-general-output-settings.html#package_filename"><code translate="No">package_filename</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>패키지 출력의 파일 이름입니다.</td>
+          <td>패키지화 된 출력의 파일 이름입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-general-output-settings.html#package_format"><code translate="No">package_format</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>출력 파일에 사용할 ZIP/패키징 형식입니다.</td>
+          <td>출력 파일에 사용할 Zip / 패키징 형식입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-general-output-settings.html#device_profile"><code translate="No">device_profile</code></a></td>
@@ -821,43 +174,43 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-general-output-settings.html#strict"><code translate="No">strict</code></a></td>
-          <td>거짓</td>
+          <td>그릇된</td>
           <td>엄격 모드를 활성화합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-general-output-settings.html#skip_video"><code translate="No">skip_video</code></a></td>
-          <td>거짓</td>
+          <td>그릇된</td>
           <td>비디오 트랙을 출력하지 마십시오.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-general-output-settings.html#skip_audio"><code translate="No">skip_audio</code></a></td>
-          <td>거짓</td>
-          <td>오디오 트랙을 출력하지 않습니다.</td>
+          <td>그릇된</td>
+          <td>오디오 트랙을 출력하지 마십시오.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-general-output-settings.html#source"><code translate="No">source</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>다른 작업의 레이블을 참조하고 해당 출력에서 만든 비디오를 입력 파일 대신 처리하기 위해 사용합니다.</td>
+          <td>다른 작업의 레이블을 참조하고 입력 파일 대신 처리를 위해 해당 출력에서 만든 비디오를 사용합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-general-output-settings.html#credentials"><code translate="No">credentials</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>저장된 자격 증명을 별명으로 참조합니다.</td>
+          <td>별명으로 저장된 자격 증명을 참조합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-general-output-settings.html#generate_md5_checksum"><code translate="No">generate_md5_checksum</code></a></td>
-          <td>거짓</td>
+          <td>그릇된</td>
           <td>출력 파일의 MD5 체크섬을 생성합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-general-output-settings.html#parallel_upload_limit"><code translate="No">parallel_upload_limit</code></a></td>
-          <td>S3의 경우 30, 다른 모든 목적지의 경우 10.</td>
-          <td>시도할 동시 업로드의 최대 수입니다.</td>
+          <td>S3의 경우 30, 기타 모든 대상의 경우 10.</td>
+          <td>시도 할 최대 동시 업로드 수입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-general-output-settings.html#headers"><code translate="No">headers</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>우리가 그것을 업로드 할 때 파일과 함께 보낼 HTTP 헤더.</td>
+          <td>파일을 업로드 할 때 파일과 함께 보낼 HTTP 헤더입니다.</td>
         </tr>
       </tbody>
     </table>
@@ -868,86 +221,86 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td><a href="/encoding-settings/general/cae-settings.html#min_renditions"><code translate="No">min_renditions</code></a></td>
           <td>1</td>
-          <td>생성할 최소 변환 수입니다.</td>
+          <td>생성 할 최소 변환 수입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/cae-settings.html#max_renditions"><code translate="No">The maximum number of renditions to generate</code></a></td>
           <td>8</td>
-          <td>생성할 최대 변환 수입니다.</td>
+          <td>생성 할 최대 변환 수입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/cae-settings.html#min_resolution"><code translate="No">min_resolution</code></a></td>
           <td>192x108</td>
-          <td>사다리에 대해 고려해야 할 최소 해상도입니다.</td>
+          <td>래더에 대해 고려할 최소 해상도입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/cae-settings.html#max_resolution"><code translate="No">max_resolution</code></a></td>
           <td>소스 해상도</td>
-          <td>래더에 대해 고려해야 할 최대 해상도입니다.</td>
+          <td>래더에 대해 고려할 최대 해상도입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/cae-settings.html#max_frame_rate"><code translate="No">max_frame_rate</code></a></td>
           <td>30</td>
-          <td>사용할 수 있는 최대 프레임 속도.</td>
+          <td>사용할 수있는 최대 프레임 속도입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/cae-settings.html#keyframe_rate"><code translate="No">keyframe_rate</code></a></td>
           <td>0.5</td>
-          <td>키프레임 속도 이 값은 0.5 또는 1일 수 있습니다. SSAI가 활성화된 콘텐츠의 경우 이 값은 1이어야 합니다.</td>
+          <td>키 프레임 속도. 이 값은 0.5 또는 1 일 수 있습니다. SSAI 사용 콘텐츠의 경우이 값은 1이어야합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/cae-settings.html#fixed_frame_rate"><code translate="No">fixed_frame_rate</code></a></td>
-          <td>진정한</td>
-          <td>생성기에 모든 변환에서 동일한 프레임 속도를 사용하도록 지시합니다. false인 경우 360p 이하의 해상도에서 H.264 기준선 프로파일 변환에 프레임 속도가 절반으로 할당됩니다.</td>
+          <td>진실</td>
+          <td>생성기에 모든 변환에서 동일한 프레임 속도를 사용하도록 지시합니다. 거짓 인 경우 360p 이하의 해상도에서 H.264 기준 프로필 변환에 프레임 속도가 절반으로 할당됩니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/cae-settings.html#min_bitrate"><code translate="No">min_bitrate</code></a></td>
           <td>200</td>
-          <td>사용할 수 있는 최소 비트 전송률 [kbps] 입니다.</td>
+          <td>사용할 수있는 최소 비트 전송률 [kbps]입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/cae-settings.html#max_bitrate"><code translate="No">max_bitrate</code></a></td>
           <td>15000</td>
-          <td>사용할 수 있는 최대 비트레이트 (kbps) 입니다.</td>
+          <td>사용할 수있는 최대 비트 전송률 [kbps]입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/cae-settings.html#max_first_rendition_bitrate"><code translate="No">max_first_rendition_bitrate</code></a></td>
           <td>400</td>
-          <td>첫 번째 변환에 사용할 수 있는 최대 비트 전송률 [kbps] 입니다.</td>
+          <td>첫 번째 변환에 사용할 수있는 최대 비트 전송률 [kbps]입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/cae-settings.html#min_granularity"><code translate="No">min_granularity</code></a></td>
           <td>30</td>
-          <td>변환 간 비트 전송률의 최소 상대 변화.</td>
+          <td>변환 간 비트 전송률의 최소 상대 변경.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/cae-settings.html#max_granularity"><code translate="No">max_granularity</code></a></td>
           <td>90</td>
-          <td>변환 간 비트 전송률의 최대 상대 변화입니다.</td>
+          <td>변환 간 비트 전송률의 최대 상대 변경.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/cae-settings.html#video_codec"><code translate="No">video_codec</code></a></td>
           <td>h264</td>
-          <td>사용할 비디오 코덱.</td>
+          <td>사용할 비디오 코덱입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/cae-settings.html#bitrate_cap_to_bitrate_ratio"><code translate="No">bitrate_cap_to_bitrate_ratio</code></a></td>
           <td>1.3</td>
-          <td>VBR 인코딩에 사용할 최대 비트 전송률과 평균 비트 전송률의 비율입니다.</td>
+          <td>VBR 인코딩에 사용할 평균 비트 전송률에 대한 최대 비트 전송률의 비율입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/cae-settings.html#buffer_size_to_bitrate_ratio"><code translate="No">buffer_size_to_bitrate_ratio</code></a></td>
           <td>2.0</td>
-          <td>VBR 인코딩에 사용할 디코더 버퍼 크기와 평균 비트 전송률의 비율입니다.</td>
+          <td>VBR 인코딩에 사용할 평균 비트 전송률에 대한 디코더 버퍼 크기의 비율입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/cae-settings.html#bitrate_cap_offset"><code translate="No">bitrate_cap_offset</code></a></td>
@@ -957,7 +310,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td><a href="/encoding-settings/general/cae-settings.html#buffer_size_offset"><code translate="No">buffer_size_offset</code></a></td>
           <td>85</td>
-          <td>VBV 버퍼 크기를 계산할 때 상수가 추가됩니다.</td>
+          <td>VBV 버퍼 크기를 계산할 때 추가되는 상수입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/cae-settings.html#rtmp_keep_alive"><code translate="No">quality_rate_tune</code></a></td>
@@ -966,15 +319,15 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/cae-settings.html#select_baseline_profile_configuration"><code translate="No">select_baseline_profile_configuration</code></a></td>
-          <td>진정한</td>
-          <td>프로파일에 사용된 변환이 하나 이상 기준선 프로파일이 됩니다.</td>
+          <td>진실</td>
+          <td>프로필에 사용 된 변환 중 하나 이상이 기준 프로필이됩니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/cae-settings.html#video_configurations"><code translate="No">video_configurations</code></a></td>
           <td>
             <span class="none">없음</span>
           </td>
-          <td>CAE 인코딩의 일부로 우선적으로 또는 필수적으로 생성되어야 하는 해상도, 프레임 속도 및 관련 코덱 설정을 설명하는 구조의 배열입니다.</td>
+          <td>CAE 인코딩의 일부로 우선적으로 또는 의무적으로 생성되어야하는 해상도, 프레임 속도 및 관련 코덱 설정을 설명하는 구조의 배열입니다.</td>
         </tr>
       </tbody>
     </table>
@@ -985,76 +338,76 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#format"><code translate="No">format</code></a></td>
-          <td>출력 파일 이름과 비디오 또는 오디오 코덱에 의해 결정됩니다. 그렇지 않으면: mp4 (표준 출력의 경우); ts (세그먼트 된 출력의 경우).</td>
+          <td>출력 파일 이름과 비디오 또는 오디오 코덱에 의해 결정됩니다. 그렇지 않으면: mp4 (표준 출력의 경우); ts (세그먼트 출력의 경우).</td>
           <td>사용할 출력 형식입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#video_codec"><code translate="No">video_codec</code></a></td>
-          <td>형식, 프로파일 또는 에 의해 결정됩니다<a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#audio_codec"><code translate="No">audio_codec</code></a> . 아무 것도 제공되지 않으면 h264.</td>
+          <td>형식, 프로파일 또는<a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#audio_codec"><code translate="No">audio_codec</code></a> h264 (제공되지 않은 경우) 에 의해 결정됩니다.</td>
           <td>사용할 비디오 코덱입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#audio_codec"><code translate="No">audio_codec</code></a></td>
-          <td>형식, 프로필 또는 에 따라 결정됩니다<a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#video_codec"><code translate="No">video_codec</code></a> . aac (제공되지 않은 경우).</td>
+          <td>형식, 프로파일 또는<a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#video_codec"><code translate="No">video_codec</code></a>제공된 파일이 없는 경우 aac로 결정됩니다.</td>
           <td>사용할 오디오 코덱입니다.</td>
         </tr>
       </tbody>
     </table>
   </section>
   <section class="bcls-section">
-    <h2 id="resolution">해상도</h2>
+    <h2 id="resolution">해결</h2>
 
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-resolution.html#size"><code translate="No">size</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>출력 비디오의 해상도 (wxH, 픽셀 단위) 입니다.</td>
+          <td>출력 비디오의 해상도 (WxH, 픽셀)입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-resolution.html#width"><code translate="No">width</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>출력 비디오의 최대 너비 (픽셀 단위) 입니다.</td>
+          <td>출력 비디오의 최대 너비 (픽셀)입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-resolution.html#height"><code translate="No">height</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>출력 비디오의 최대 높이 (픽셀 단위) 입니다.</td>
+          <td>출력 비디오의 최대 높이 (픽셀)입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-resolution.html#upscale"><code translate="No">upscale</code></a></td>
-          <td>거짓</td>
-          <td>입력이 대상 출력 해상도보다 작은 경우 출력을 업스케일합니다.</td>
+          <td>그릇된</td>
+          <td>입력이 목표 출력 해상도보다 작은 경우 출력을 업 스케일링합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-resolution.html#aspect_mode"><code translate="No">aspect_mode</code></a></td>
-          <td>영역</td>
-          <td>입력 파일의 종횡비가 대상 너비/높이 종횡비와 일치하지 않을 때 수행 할 작업.</td>
+          <td>보존하다</td>
+          <td>입력 파일의 가로 세로 비율이 대상 가로 / 세로 가로 세로 비율과 일치하지 않을 때 수행 할 작업</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-resolution.html#sample_aspect_ratio"><code translate="No">sample_aspect_ratio</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>출력 비디오에 사용할 샘플 (픽셀) 종횡비입니다. 크기, 너비, 높이 및<code translate="No">aspect_mode</code>모드 옵션은 모두 디스플레이 치수가 아닌 인코딩된 픽셀 치수를 나타냅니다.</td>
+          <td>출력 비디오에 사용할 샘플 (픽셀) 종횡비입니다. 크기, 너비, 높이 및<code translate="No">aspect_mode</code>모드 옵션은 모두 디스플레이 크기가 아니라 인코딩된 픽셀 크기를 나타냅니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-resolution.html#force_interlace_headers"><code translate="No">force_interlace_headers</code></a></td>
-          <td><span class="none">거짓</span></td>
-          <td>일부 디코더는 인터레이스 콘텐츠를 요청하지만 프로그레시브 콘텐츠는 잘 재생됩니다. 이 설정은 프로그레시브 콘텐츠의 메타데이터에 “인터레이스” 헤더를 추가하여 실제로 인터레이스된 것처럼 보이게 합니다.</td>
+          <td><span class="none">그릇된</span></td>
+          <td>일부 디코더는 인터레이스 콘텐츠를 요청하지만 프로그레시브 콘텐츠는 정상적으로 재생됩니다. 이 설정은 프로그레시브 콘텐츠의 메타 데이터에 "인터레이스"헤더를 추가하여 실제로 인터레이스 된 것처럼 보이게합니다.</td>
         </tr>
       </tbody>
     </table>
@@ -1065,31 +418,31 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#quality"><code translate="No">quality</code></a></td>
           <td>3</td>
-          <td>대상 시각적 품질과 일치하도록 최적의 비디오 비트 전송률을 자동 선택합니다.</td>
+          <td>대상 화질과 일치하도록 최적의 비디오 비트 전송률을 자동 선택합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#video_bitrate"><code translate="No">video_bitrate</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>대상 비디오 비트 전송률 (kbps) 입니다. 특정 비트 전송률을 목표로 삼지 않는 한 품질 설정을 선택하는 경우에는 필요하지 않습니다.</td>
+          <td>대상 비디오 비트 전송률 (kbps)입니다. 특정 비트 전송률을 대상으로하지 않는 한 품질 설정을 선택하는 경우 필요하지 않습니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#audio_quality"><code translate="No">audio_quality</code></a></td>
           <td>3</td>
-          <td>대상 음질에 맞게 최적의 오디오 비트 전송률을 자동 선택합니다.</td>
+          <td>대상 음질과 일치하도록 최상의 오디오 비트 전송률을 자동 선택합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#audio_bitrate"><code translate="No">audio_bitrate</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>대상 오디오 비트 전송률 (kbps) 입니다. 특정 비트 전송률을 목표로 삼지 않는 한<code translate="No">audio_quality</code>설정을 선택하는 경우에는 필요하지 않습니다.</td>
+          <td>대상 오디오 비트 전송률 (kbps)입니다. 특정 비트레이트를 타깃팅하려는 경우가 아니면<code translate="No">audio_quality</code>설정을 선택하는 경우에는 필요하지 않습니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#max_video_bitrate"><code translate="No">max_video_bitrate</code></a></td>
@@ -1099,27 +452,27 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#speed"><code translate="No">speed</code></a></td>
           <td>3</td>
-          <td>대상 트랜스코딩 속도입니다. 느린 인코딩은 일반적으로 고급 압축을 허용합니다.</td>
+          <td>목표 트랜스 코딩 속도입니다. 느린 인코딩은 일반적으로 더 고급 압축을 허용합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#decoder_bitrate_cap"><code translate="No">decoder_bitrate_cap</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>디코더 버퍼에 공급되는 최대 비트 전송률입니다. 일반적으로 스트리밍 또는 특정 장치 (예: <code translate="No">Blu-Ray</code> ) 를 대상으로 하는 비디오에 사용됩니다.</td>
+          <td>디코더 버퍼에 공급되는 최대 비트 전송률입니다. 일반적으로 스트리밍을 위한 비디오 또는 특정 디바이스를 타겟팅하는 데 사용됩니다 (예: <code translate="No">Blu-Ray</code> ).</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#decoder_buffer_size"> <code translate="No">decoder_buffer_size</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>와 함께 사용되는 디코더 버퍼의 크기입니다<code translate="No">bitrate_cap</code> .</td>
+          <td>디코더 버퍼의 크기로, 와 함께 사용됩니다<code translate="No">bitrate_cap</code> .</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#one_pass"><code translate="No">one_pass</code></a></td>
-          <td>거짓</td>
+          <td>그릇된</td>
           <td>원 패스 인코딩을 강제합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#audio_constant_bitrate"><code translate="No">audio_constant_bitrate</code></a></td>
-          <td>거짓</td>
-          <td>가능한 경우 오디오에 대해 일정 비트 전송률 모드를 활성화합니다.</td>
+          <td>그릇된</td>
+          <td>가능하면 오디오에 대해 고정 비트 레이트 모드를 활성화하십시오.</td>
         </tr>
       </tbody>
     </table>
@@ -1130,9 +483,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
@@ -1154,31 +507,31 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-frame-rate.html#keyframe_interval"><code translate="No">keyframe_interval</code></a></td>
           <td>250</td>
-          <td>각 키프레임 사이의 최대 프레임 수입니다. H.264 비디오의 경우 키프레임은 IDR 프레임입니다.</td>
+          <td>각 키 프레임 사이의 최대 프레임 수입니다. H.264 비디오의 경우 키 프레임은 IDR 프레임입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-frame-rate.html#keyframe_rate"><code translate="No">keyframe_rate</code></a></td>
-          <td><code translate="No">keyframe_interval</code>중 250명</td>
-          <td>초당 키프레임 수입니다.</td>
+          <td><code translate="No">keyframe_interval</code> 250의</td>
+          <td>초당 키 프레임 수입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-frame-rate.html#fixed_keyframe_interval"><code translate="No">fixed_keyframe_interval</code></a></td>
-          <td>거짓</td>
-          <td>고정 키프레임 간격 모드 (VP6, VP8, VP9 및 H.264에만 해당) 를 활성화합니다.</td>
+          <td>그릇된</td>
+          <td>고정 키 프레임 간격 모드를 활성화합니다 (VP6, VP8, VP9 및 H.264 만 해당).</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-frame-rate.html#forced_keyframe_interval"><code translate="No">forced_keyframe_interval</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>지정된 간격으로 키프레임을 강제 적용합니다 (H.264에만 해당).</td>
+          <td>지정된 간격으로 키 프레임을 적용합니다 (H.264 만 해당).</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-frame-rate.html#forced_keyframe_rate"><code translate="No">forced_keyframe_rate</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>프레임 속도를 고려하여 초당 키프레임 수를 지정합니다 (H.264에만 해당).</td>
+          <td>프레임 속도를 고려하여 초당 키 프레임 수를 지정합니다 (H.264 만 해당).</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-frame-rate.html#generate_frame_index"><code translate="No">generate_frame_index</code></a></td>
-          <td>거짓</td>
+          <td>그릇된</td>
           <td>비디오 프레임 인덱스 파일을 생성합니다.</td>
         </tr>
         <tr>
@@ -1195,9 +548,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
@@ -1208,23 +561,23 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video_codec_profile"><code translate="No">video_codec_profile</code></a></td>
-          <td>H.264: 베이스라인, HEVC: 메인, VP9: 0</td>
-          <td>사용할 비디오 코덱 프로파일 (H.264, HEVC, VP9)</td>
+          <td>H.264: 기준선, HEVC: 메인, VP9: 0</td>
+          <td>사용할 비디오 코덱 프로필 (H.264, HEVC, VP9).</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video_codec_level"><code translate="No">video_codec_level</code></a></td>
-          <td>출력 비디오를 기반으로 레벨 차트를 사용하여 자동으로 계산됩니다. <a href="http://en.wikipedia.org/wiki/H.264#Levels"><code translate="No">H.264-levels</code></a>를 참조하십시오. <a href=" http://en.wikipedia.org/wiki/High_Efficiency_Video_Coding#Tiers_and_levels"><code translate="No">HEVC-levels</code></a></td>
-          <td>사용할 비디오 코덱 레벨 (H.264, HEVC)</td>
+          <td>출력 영상을 기반으로 레벨 차트를 사용하여 자동 계산됩니다. 참조<a href="http://en.wikipedia.org/wiki/H.264#Levels"><code translate="No">H.264-levels</code></a> , <a href=" http://en.wikipedia.org/wiki/High_Efficiency_Video_Coding#Tiers_and_levels"><code translate="No">HEVC-levels</code></a></td>
+          <td>사용할 비디오 코덱 수준 (H.264, HEVC)입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#video_bframes"> <code translate="No">video_bframes</code></a></td>
           <td>0</td>
-          <td>연속 B-프레임의 최대 수 (H.264, HEVC)</td>
+          <td>연속 B 프레임의 최대 수 (H.264, HEVC)</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-video.html#color_metadata"><code translate="No">color_metadata</code></a></td>
-          <td>영역</td>
-          <td>출력 비디오의 입력에서 색상 메타데이터 정보를 유지하거나 버립니다.</td>
+          <td>보존하다</td>
+          <td>출력 비디오의 입력에서 색상 메타 데이터 정보를 유지하거나 삭제합니다.</td>
         </tr>
       </tbody>
     </table>
@@ -1235,31 +588,31 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-audio.html#audio_sample_rate"><code translate="No">audio_sample_rate</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>오디오 샘플 속도 (Hz) 입니다.</td>
+          <td>Hz 단위의 오디오 샘플 속도입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-audio.html#max_audio_sample_rate"><code translate="No">max_audio_sample_rate</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>최대 오디오 샘플 속도 (Hz) 입니다.</td>
+          <td>최대 오디오 샘플 속도 (Hz)입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-audio.html#audio_channels"><code translate="No">audio_channels</code></a></td>
-          <td>원본 파일이 모노인 경우 1, 그렇지 않으면 2.</td>
-          <td>오디오 채널의 수는 다음과 같습니다. 1 또는 2.</td>
+          <td>원본 파일이 모노 인 경우 1; 그렇지 않으면 2.</td>
+          <td>오디오 채널 수: 1 또는 2.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-audio.html#audio_bit_depth"><code translate="No">audio_bit_depth</code></a></td>
           <td>16</td>
-          <td>샘플 당 비트 수: 16일, 24일, 32세</td>
+          <td>샘플당 비트 수: 16, 24, 32.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-audio.html#audio_language"><code translate="No">audio_language</code></a></td>
@@ -1285,286 +638,286 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-thumbnails.html#thumbnails"><code translate="No">thumbnails</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>특정 비디오의 미리보기 이미지를 캡처합니다.</td>
+          <td>주어진 비디오의 썸네일을 캡처합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-thumbnails.html#label"><code translate="No">label</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>썸네일 그룹의 각 세트를 식별하는 레이블입니다.</td>
+          <td>각 썸네일 그룹 집합을 식별하는 레이블입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-thumbnails.html#format"><code translate="No">format</code></a></td>
-          <td>PNG</td>
-          <td>축소판 이미지의 형식입니다.</td>
+          <td>png</td>
+          <td>미리보기 이미지의 형식입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-thumbnails.html#number"><code translate="No">number</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>간격이 균등한 여러 축소판 그림.</td>
+          <td>균등 한 간격의 여러 축소판.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-thumbnails.html#start_at_first_frame"><code translate="No">start_at_first_frame</code></a></td>
-          <td>거짓</td>
+          <td>그릇된</td>
           <td>첫 번째 프레임부터 썸네일 생성을 시작합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-thumbnails.html#interval"><code translate="No">interval</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>초 단위로 짝수 간격으로 썸네일을 찍습니다.</td>
+          <td>균등 한 간격 (초)으로 미리보기 이미지를 찍습니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-thumbnails.html#interval_in_frames"><code translate="No">interval_in_frames</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>프레임 단위로 균일한 간격으로 썸네일을 찍습니다.</td>
+          <td>프레임 단위로 균등 한 간격으로 썸네일을 찍습니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-thumbnails.html#times"><code translate="No">times</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>축소판을 가져올 시간 (초) 의 배열입니다.</td>
+          <td>썸네일을 가져올 시간 (초)의 배열입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-thumbnails.html#aspect_mode"><code translate="No">aspect_mode</code></a></td>
-          <td>영역</td>
-          <td>입력 파일의 종횡비와 다른 축소판 너비/높이를 처리하는 방법.</td>
+          <td>보존하다</td>
+          <td>입력 파일의 가로 세로 비율과 다른 축소판 너비 / 높이를 처리하는 방법입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-thumbnails.html#size"><code translate="No">size</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>썸네일 해상도<code translate="No">WxH</code> .</td>
+          <td>축소판 해상도는 로<code translate="No">WxH</code> .</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-thumbnails.html#width"><code translate="No">width</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>축소판의 최대 너비 (픽셀 단위) 입니다.</td>
+          <td>축소판의 최대 너비 (픽셀)입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-thumbnails.html#height"><code translate="No">height</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>축소판의 최대 높이 (픽셀 단위) 입니다.</td>
+          <td>축소판의 최대 높이 (픽셀)입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-thumbnails.html#base_url"><code translate="No">base_url</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>파일 이름 없이 썸네일을 배치할 기본 S3, 클라우드 파일, GCS, FTP, FTPS 또는 SFTP 디렉토리 URL입니다.</td>
+          <td>파일 이름없이 썸네일을 배치 할 기본 S3, Cloud Files, GCS, FTP, FTPS 또는 SFTP 디렉토리 URL.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-thumbnails.html#prefix"><code translate="No">prefix</code></a></td>
-          <td>프레임</td>
+          <td>틀</td>
           <td>축소판 파일 이름의 접두사입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-thumbnails.html#filename"><code translate="No">filename</code></a></td>
-          <td>프레임</td>
-          <td>보간된 축소판 파일 이름입니다.</td>
+          <td>틀</td>
+          <td>보간 된 썸네일 파일 이름.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-thumbnails.html#public"><code translate="No">public</code></a></td>
-          <td>거짓</td>
-          <td>S3에서 출력을 공개적으로 읽을 수 있게 만듭니다.</td>
+          <td>그릇된</td>
+          <td>S3에서 출력을 공개적으로 읽을 수 있도록합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-thumbnails.html#access_control"><code translate="No">access_control</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>S3로 전송된 파일에 대한 세분화된 액세스 제어 규칙</td>
+          <td>S3로 전송되는 파일에 대한 세분화 된 액세스 제어 규칙.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-thumbnails.html#grantee"><code translate="No">grantee</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>세분화된 S3 액세스 제어 권한에 대한 피부여자를 설정합니다.</td>
+          <td>세분화 된 S3 액세스 제어 권한에 대한 피부 여자를 설정합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-thumbnails.html#permission"><code translate="No">permission</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>세분화된 액세스 제어를 사용할 때 피부여자의 권한을 설정합니다.</td>
+          <td>세분화 된 액세스 제어를 사용할 때 피부 여자에 대한 권한을 설정합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-thumbnails.html#rss"><code translate="No">rrs</code></a></td>
-          <td>거짓</td>
-          <td>Amazon S3의 감소된 중복 스토리지입니다.</td>
+          <td>그릇된</td>
+          <td>Amazon S3의 감소 된 중복 스토리지.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-thumbnails.html#headers"><code translate="No">headers</code></a></td>
           <td><span class="none">없음</span></td>
-          <td><code translate="No">HTTP headers</code>하여 미리보기 이미지를 업로드할 때 미리보기 이미지와 함께 보낼 수 있습니다.</td>
+          <td><code translate="No">HTTP headers</code>미리보기 이미지를 업로드할 때 미리보기 이미지와 함께 보낼 수 있습니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-thumbnails.html#credentials"><code translate="No">credentials</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>저장된 자격 증명을 별명으로 참조합니다.</td>
+          <td>별명으로 저장된 자격 증명을 참조합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-thumbnails.html#parallel_upload_limit"><code translate="No">parallel_upload_limit</code></a></td>
-          <td>S3의 경우 30, 다른 모든 목적지의 경우 10.</td>
-          <td>시도할 동시 업로드의 최대 수입니다.</td>
+          <td>S3의 경우 30, 기타 모든 대상의 경우 10.</td>
+          <td>시도 할 최대 동시 업로드 수입니다.</td>
         </tr>
       </tbody>
     </table>
   </section>
   <section class="bcls-section">
-    <h2 id="Watermarks">워터마크</h2>
+    <h2 id="Watermarks">워터 마크</h2>
 
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-watermarks.html#watermarks"><code translate="No">watermarks</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>출력 비디오에 하나 이상의 워터마크를 추가합니다.</td>
+          <td>출력 비디오에 하나 이상의 워터 마크를 추가합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-watermarks.html#url"><code translate="No">url</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>워터마크로 사용할 원격 이미지 파일의 URL입니다.</td>
+          <td>워터 마크로 사용할 원격 이미지 파일의 URL입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-watermarks.html#x"><code translate="No">x</code></a></td>
           <td>-10</td>
-          <td>x축에서 워터마크를 배치할 위치입니다.</td>
+          <td>x축에 워터마크를 배치할 위치입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-watermarks.html#y"><code translate="No">y</code></a></td>
           <td>-10</td>
-          <td>Y축에 워터마크를 배치할 위치입니다.</td>
+          <td>Y 축에서 워터 마크를 배치 할 위치입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-watermarks.html#width"><code translate="No">width</code></a></td>
-          <td><a href="/encoding-settings/assets/encoding-settings-watermarks.html#height">높이</a>또는 원본 이미지 너비에 맞게 축척합니다.</td>
-          <td>워터마크의 축척된 폭입니다.</td>
+          <td><a href="/encoding-settings/assets/encoding-settings-watermarks.html#height">높이</a>또는 원본 이미지 너비에 맞게 배율을 조정합니다.</td>
+          <td>워터 마크의 크기가 조정 된 너비입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-watermarks.html#height"><code translate="No">height</code></a></td>
-          <td><a href="/encoding-settings/assets/encoding-settings-watermarks.html#width">너비</a>또는 원래 이미지 높이에 맞게 축척합니다.</td>
-          <td>워터마크의 축척된 높이입니다.</td>
+          <td><a href="/encoding-settings/assets/encoding-settings-watermarks.html#width">너비</a>또는 원본 이미지 높이에 맞게 배율을 조정합니다.</td>
+          <td>워터 마크의 크기가 조정 된 높이입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-watermarks.html#origin"><code translate="No">origin</code></a></td>
-          <td>콘텐츠</td>
-          <td>출력에서 워터마크 위치의 기반이 되는 부분입니다.</td>
+          <td>함유량</td>
+          <td>워터 마크 위치의 기준이되는 출력 부분입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-watermarks.html#opacity"><code translate="No">opacity</code></a></td>
           <td>1.0</td>
-          <td>워터마크를 투명하게 만듭니다.</td>
+          <td>워터 마크를 투명하게 만듭니다.</td>
         </tr>
       </tbody>
     </table>
   </section>
   <section class="bcls-section">
-    <h2 id="Captions">자막</h2>
+    <h2 id="Captions">캡션</h2>
 
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-captions.html#caption_url"><code translate="No">caption_url</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>출력에 포함할 SCC, DFXP 또는 SAMI 캡션 파일의 URL입니다.</td>
+          <td>출력에 포함 할 SCC, DFXP 또는 SAMI 캡션 파일의 URL입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/assets/encoding-settings-captions.html#skip_captions"><code translate="No">skip_captions</code></a></td>
-          <td>거짓</td>
+          <td>그릇된</td>
           <td>출력 파일에 캡션을 추가하거나 전달하지 마십시오.</td>
         </tr>
       </tbody>
     </table>
   </section>
   <section class="bcls-section">
-    <h2 id="Video_Processing">비디오 프로세싱</h2>
+    <h2 id="Video_Processing">비디오 처리</h2>
 
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html#rotate"><code translate="No">rotate</code></a></td>
-          <td>자동으로 감지됨</td>
+          <td>자동 감지</td>
           <td>비디오를 회전합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html#deinterlace"><code translate="No">deinterlace</code></a></td>
-          <td>감지합니다</td>
-          <td>입력 비디오를 디인터레이스합니다.</td>
+          <td>감지하다</td>
+          <td>디인터레이스 입력 비디오.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html#sharpen"><code translate="No">sharpen</code></a></td>
-          <td>거짓</td>
-          <td>선명 효과 필터를 적용합니다.</td>
+          <td>그릇된</td>
+          <td>선명하게 필터를 적용합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html#denoise"><code translate="No">denoise</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>제거 필터를 적용합니다.</td>
+          <td>노이즈 제거 필터를 적용합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html#autolevel"><code translate="No">autolevel</code></a></td>
-          <td>거짓</td>
-          <td>색상 자동 레벨 필터를 적용합니다.</td>
+          <td>그릇된</td>
+          <td>색상 자동 수준 필터를 적용합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html#deblock"><code translate="No">deblock</code></a></td>
-          <td>거짓</td>
-          <td>차단 해제 필터를 적용합니다.</td>
+          <td>그릇된</td>
+          <td>디 블록 필터를 적용합니다.</td>
         </tr>
       </tbody>
     </table>
   </section>
   <section class="bcls-section">
-    <h2 id="Audio_Processing">오디오 프로세싱</h2>
+    <h2 id="Audio_Processing">오디오 처리</h2>
 
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-audio-processing.html#audio_gain"><code translate="No">audio_gain</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>오디오에 게인 양을 dB () 로 적용합니다.</td>
+          <td>오디오에 게인 양을 dB 단위로 적용합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-audio-processing.html#audio_normalize"><code translate="No">audio_normalize</code></a></td>
-          <td>거짓</td>
-          <td>오디오를 0dB로 정규화합니다.</td>
+          <td>그릇된</td>
+          <td>오디오를 0dB로 표준화합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-audio-processing.html#audio_pre_normalize"><code translate="No">audio_pre_normalize</code></a></td>
-          <td>거짓</td>
-          <td>확장 또는 압축 효과를 적용하기 전에 오디오를 정규화합니다.</td>
+          <td>그릇된</td>
+          <td>확장 또는 압축 효과를 적용하기 전에 오디오를 표준화하십시오.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-audio-processing.html#audio_post_normalize"><code translate="No">audio_post_normalize</code></a></td>
-          <td>거짓</td>
-          <td>확장 또는 압축 효과를 적용한 후 오디오를 표준화합니다.</td>
+          <td>그릇된</td>
+          <td>확장 또는 압축 효과를 적용한 후 오디오를 표준화하십시오.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-audio-processing.html#audio_bass"><code translate="No">audio_bass</code></a></td>
@@ -1584,7 +937,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-audio-processing.html#audio_lowpass"><code translate="No">audio_lowpass</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>오디오에 로우 패스 필터를 적용합니다.</td>
+          <td>오디오에 저역 통과 필터를 적용합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-audio-processing.html#audio_compression_ratio"><code translate="No">audio_compression_ratio</code></a></td>
@@ -1609,7 +962,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-audio-processing.html#audio_fade"><code translate="No">audio_fade</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>페이드 인 및 페이드 아웃 효과를 오디오에 적용합니다.</td>
+          <td>오디오에 페이드 인 및 페이드 아웃 효과를 적용합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-audio-processing.html#audio_fade_in"><code translate="No">audio_fade_in</code></a></td>
@@ -1619,11 +972,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-audio-processing.html#audio_loudness_level"><code translate="No">audio_loudness_level</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>오디오의 음량 레벨을 조정합니다.</td>
+          <td>오디오의 크기를 조정합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-audio-processing.html#audio_karaoke_mode"><code translate="No">audio_karaoke_mode</code></a></td>
-          <td>거짓</td>
+          <td>그릇된</td>
           <td>오디오에 노래방 효과를 적용합니다.</td>
         </tr>
       </tbody>
@@ -1635,21 +988,21 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <table class="bcls-table">
     <thead class="bcls-table__head">
       <tr>
-        <th>설정</th>
-        <th>기본값</th>
-        <th>설명</th>
+        <th>환경</th>
+        <th>기본</th>
+        <th>기술</th>
       </tr>
     </thead>
     <tbody class="bcls-table__body">
       <tr>
         <td><a href="/encoding-settings/assets/encoding-settings-clips.html#start_clip"><code translate="No">start_clip</code></a></td>
         <td><span class="none">없음</span></td>
-        <td>사용자 정의 시작 시간을 설정하여 입력 파일의 일부만 인코딩합니다.</td>
+        <td>사용자 지정 시작 시간을 설정하여 입력 파일의 일부만 인코딩합니다.</td>
       </tr>
       <tr>
         <td><a href="/encoding-settings/assets/encoding-settings-clips.html#clip_length"><code translate="No">clip_length</code></a></td>
         <td><span class="none">없음</span></td>
-        <td>사용자 정의 클립 길이를 설정하여 입력 파일의 일부만 인코딩합니다.</td>
+        <td>사용자 지정 클립 길이를 설정하여 입력 파일의 일부만 인코딩합니다.</td>
       </tr>
     </tbody>
   </table>
@@ -1659,36 +1012,36 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td><a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html#public"><code translate="No">public</code></a></td>
-          <td>거짓</td>
-          <td>S3에서 출력을 공개적으로 읽을 수 있게 만듭니다.</td>
+          <td>그릇된</td>
+          <td>S3에서 출력을 공개적으로 읽을 수 있도록합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html#rrs"><code translate="No">rrs</code></a></td>
-          <td>거짓</td>
-          <td>Amazon S3의 감소된 중복 스토리지입니다.</td>
+          <td>그릇된</td>
+          <td>Amazon S3의 감소 된 중복 스토리지.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html#access_control"><code translate="No">access_control</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>S3로 전송된 파일에 대한 세분화된 액세스 제어 규칙</td>
+          <td>S3로 전송되는 파일에 대한 세분화 된 액세스 제어 규칙.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html#grantee"><code translate="No">grantee</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>세분화된 S3 액세스 제어 권한에 대한 피부여자를 설정합니다.</td>
+          <td>세분화 된 S3 access_control 권한에 대한 피부 여자를 설정합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html#permission"><code translate="No">permission</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>세분화된 access_Control을 사용할 때 피부여자에 대한 권한을 설정합니다.</td>
+          <td>세분화 된 access_control을 사용할 때 피부 여자에 대한 권한을 설정합니다.</td>
         </tr>
       </tbody>
     </table>
@@ -1699,21 +1052,21 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-notifications.html#notifications"><code translate="No">notifications</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>작업 또는 출력이 완료되면 알림을 받습니다.</td>
+          <td>작업 또는 출력이 완료되면 알림을받습니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-notifications.html#url"><code translate="No">url</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>작업 또는 출력이 완료되면 알림을 받습니다.</td>
+          <td>작업 또는 출력이 완료되면 알림을받습니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-notifications.html#format"><code translate="No">format</code></a></td>
@@ -1723,7 +1076,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-notifications.html#headers"><code translate="No">headers</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>HTTP 알림에 따라 전달할 헤더입니다.</td>
+          <td>HTTP 알림에 전달할 헤더입니다.</td>
         </tr>
         <!-- <tr>
 				<td><a href="/node/17881#event"><code translate="No">event</code></a></td>
@@ -1739,86 +1092,86 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html#min_size"><code translate="No">min_size</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>소스 차원이 지정된 차원보다 작은 경우 출력을 건너뜁니다.</td>
+          <td>소스 차원이 지정된 차원보다 작은 경우 출력을 건너 뜁니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html#max_size"><code translate="No">max_size</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>소스 차원이 지정된 차원보다 큰 경우 출력을 건너뜁니다.</td>
+          <td>소스 차원이 지정된 차원보다 큰 경우 출력을 건너 뜁니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html#min_duration"><code translate="No">min_duration</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>소스 지속 시간이 지정된 지속 시간보다 짧은 경우 출력을 건너 뜁니다 (초).</td>
+          <td>소스 기간이 지정된 기간 (초)보다 짧으면 출력을 건너 뜁니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html#max_duration"><code translate="No">max_duration</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>소스 지속 시간이 지정된 지속 시간보다 긴 경우 출력을 건너 뜁니다 (초).</td>
+          <td>소스 기간이 지정된 기간 (초)보다 길면 출력을 건너 뜁니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html#min_audio_bitrate"><code translate="No">min_audio_bitrate</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>소스 오디오 비트 전송률이 지정된 비트 전송률 (kbps) 보다 작은 경우 출력을 건너뜁니다.</td>
+          <td>소스 오디오 비트 전송률이 지정된 비트 전송률 (kbps)보다 작은 경우 출력을 건너 뜁니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html#max_audio_bitrate"><code translate="No">max_audio_bitrate</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>소스 오디오 비트 전송률이 지정된 비트 전송률 (kbps) 보다 큰 경우 출력을 건너뜁니다.</td>
+          <td>소스 오디오 비트 전송률이 지정된 비트 전송률 (kbps)보다 크면 출력을 건너 뜁니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html#min_video_bitrate"><code translate="No">min_video_bitrate</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>소스 비디오 비트 전송률이 지정된 비트 전송률 (kbps) 보다 작은 경우 출력을 건너뜁니다.</td>
+          <td>소스 비디오 비트 전송률이 지정된 비트 전송률 (kbps)보다 작은 경우 출력을 건너 뜁니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html#max_video_bitrate"><code translate="No">max_video_bitrate</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>소스 비디오 비트 전송률이 지정된 비트 전송률 (kbps) 보다 큰 경우 출력을 건너뜁니다.</td>
+          <td>소스 비디오 비트 전송률이 지정된 비트 전송률 (kbps)보다 큰 경우 출력을 건너 뜁니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html#require_audio"><code translate="No">require_audio</code></a></td>
-          <td>거짓</td>
-          <td>소스 파일에 오디오 트랙이 포함되지 않은 경우 출력을 건너뜁니다.</td>
+          <td>그릇된</td>
+          <td>소스 파일에 오디오 트랙이 포함되지 않은 경우 출력을 건너 뜁니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html#require_video"><code translate="No">require_video</code></a></td>
-          <td>거짓</td>
-          <td>소스 파일에 비디오 트랙이 포함되지 않은 경우 출력을 건너뜁니다.</td>
+          <td>그릇된</td>
+          <td>소스 파일에 비디오 트랙이 포함되지 않은 경우 출력을 건너 뜁니다.</td>
         </tr>
       </tbody>
     </table>
   </section>
   <section class="bcls-section">
-    <h2 id="Segmented_Streaming">세그먼트화된 스트리밍</h2>
+    <h2 id="Segmented_Streaming">세그먼트 스트리밍</h2>
 
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#streaming_delivery_format"><code translate="No">streaming_delivery_format</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>스트리밍 가능한 출력의 형식/프로토콜 구성을 설정합니다.</td>
+          <td>스트리밍 가능한 출력을위한 형식 / 프로토콜 구성을 설정합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#streaming_delivery_profile"><code translate="No">streaming_delivery_profile</code></a></td>
           <td>라이브</td>
-          <td>스트리밍 전송 형식의 특정 프로필을 설정합니다.</td>
+          <td>스트리밍 전달 형식의 특정 프로필을 설정합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#playlist_format"><code translate="No">playlist_format</code></a></td>
@@ -1828,97 +1181,97 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#segment_seconds"><code translate="No">segment_seconds</code></a></td>
           <td>10</td>
-          <td>세그먼트화된 출력에서 각 세그먼트의 최대 지속 시간을 설정합니다.</td>
+          <td>세그먼트 출력에서 각 세그먼트의 최대 기간을 설정합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#alternate_audio"><code translate="No">alternate_audio</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>HLS 재생 목록에 대한 대체 오디오 스트림 집합을 제공합니다.</td>
+          <td>HLS 재생 목록에 대한 대체 오디오 스트림 세트를 제공합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#streams"><code translate="No">streams</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>재생 목록으로 다시 포맷할 스트림 정보 목록을 제공합니다.</td>
+          <td>재생 목록으로 다시 포맷 할 스트림 정보 목록을 제공합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#path"><code translate="No">path</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>스트림 매니페스트 파일의 경로를 지정합니다</td>
+          <td>스트림 매니페스트 파일의 경로를 지정합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#bandwidth"><code translate="No">bandwidth</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>재생 목록 스트림의 대역폭을 지정합니다</td>
+          <td>재생 목록 스트림의 대역폭을 지정합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#resolution"><code translate="No">resolution</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>재생 목록 스트림의 해상도를 지정합니다</td>
+          <td>재생 목록 스트림의 해상도를 지정합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#codecs"><code translate="No">codecs</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>재생 목록 스트림에 사용되는 코덱을 지정합니다</td>
+          <td>재생 목록 스트림에 사용되는 코덱을 지정합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#audio"><code translate="No">audio</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>재생 목록의 대체 오디오 트랙을 지정합니다.</td>
+          <td>재생 목록에 대한 대체 오디오 트랙을 지정합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#segment_image_url"><code translate="No">segment_image_url</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>오디오 전용 세그먼트에 표시할 이미지</td>
+          <td>오디오 전용 세그먼트에 표시 할 이미지</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#segment_video_snapshots"><code translate="No">segment_video_snapshots</code></a></td>
-          <td>거짓</td>
-          <td>비디오 파일을 오디오 전용 세그먼트로 분할하는 경우 비디오의 스냅샷을 각 세그먼트의 축소판으로 만듭니다.</td>
+          <td>그릇된</td>
+          <td>비디오 파일을 오디오 전용 세그먼트로 분할 할 때 비디오의 스냅 샷을 각 세그먼트의 썸네일로 찍습니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#source"><code translate="No">source</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>재생 목록 스트림의 소스 미디어를 지정합니다</td>
+          <td>재생 목록 스트림의 소스 미디어를 지정합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#max_hls_protocol_version"><code translate="No">max_hls_protocol_version</code></a></td>
-          <td>라이브 출력의 경우 3, 샘플 AES 암호화의 경우 5, 그렇지 않으면 2.</td>
+          <td>라이브 출력용 3 개, 샘플 AES 암호화 용 5 개; 그렇지 않으면 2.</td>
           <td>사용할 최대 HLS 프로토콜입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#hls_optimized_ts"><code translate="No">hls_optimized_ts</code></a></td>
-          <td>진정한</td>
+          <td>진실</td>
           <td>iOS에서 HTTP 라이브 스트리밍을 위해 TS 세그먼트 파일을 최적화합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#prepare_for_segmenting"><code translate="No">prepare_for_segmenting</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>세그먼트화를 위한 캡션 및 키프레임 타이밍을 포함합니다.</td>
+          <td>분할을위한 캡션 및 키 프레임 타이밍을 포함합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#smil-base-url"><code translate="No">smil_base_url</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>SMIL 재생 목록의 섹션에 추가합니다 .</td>
+          <td>SMIL 재생 목록의 &lt;head&gt; 섹션에 &lt;meta base = "smil_base_url_value"/&gt;를 추가합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#byte_range_segmenting"><code translate="No">byte_range_segmenting</code></a></td>
-          <td>거짓</td>
-          <td>세그먼트당 하나의 파일이 아닌 단일 출력 파일을 생성하도록 HLS 세그먼트를 구성합니다.</td>
+          <td>그릇된</td>
+          <td>세그먼트 당 하나의 파일이 아닌 단일 출력 파일을 생성하도록 HLS 세그먼트 화를 구성합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#generate_keyframe_manifest"><code translate="No">generate_keyframe_manifest</code></a></td>
-          <td>거짓</td>
-          <td>빨리 감기 및 역방향 재생에 필요한 HLS 키프레임 (I-프레임) 매니페스트를 생성합니다.</td>
+          <td>그릇된</td>
+          <td>빨리 감기 및 뒤로 재생에 필요한 HLS 키 프레임 (I-frame) 매니페스트를 생성합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#keyframe_manifest_filename"><code translate="No">keyframe_manifest_filename</code></a></td>
-          <td>아이프레임 인덱스.m3u8</td>
-          <td>HLS 키프레임 매니페스트의 기본 파일 이름을 재정의합니다.</td>
+          <td>iframe_index.m3u8</td>
+          <td>HLS 키 프레임 매니페스트의 기본 파일 이름을 재정의합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#allow_skipped_sources"><code translate="No">allow_skipped_sources</code></a></td>
-          <td>거짓</td>
-          <td>건너뛴<a href="/encoding-settings/general/encoding-settings-conditional-outputs.html">조건부 출력</a>소스는 무시합니다.</td>
+          <td>그릇된</td>
+          <td>건너뛴<a href="/encoding-settings/general/encoding-settings-conditional-outputs.html">조건부</a>출력인 소스는 무시합니다.</td>
         </tr>
       </tbody>
     </table>
@@ -1929,9 +1282,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
@@ -1943,22 +1296,22 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td><a href="/encoding-settings/content-protection/encoding-settings-encryption.html#encryption_key"><code translate="No">encryption_key</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>Zencoder에서 하나의 암호화 키를 생성하는 대신 사용할 단일 암호화 키를 설정합니다.</td>
+          <td>Zencoder에서 생성하는 대신 사용할 단일 암호화 키를 설정합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/content-protection/encoding-settings-encryption.html#encryption_key_url"><code translate="No">encryption_key_url</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>Zencoder가 하나의 암호화 키를 생성하도록 하는 대신 사용할 단일 암호화 키로 URL을 설정합니다.</td>
+          <td>Zencoder에서 생성하는 대신 사용할 단일 암호화 키로 URL을 설정합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/content-protection/encoding-settings-encryption.html#encryption_key_rotation_period"><code translate="No">encryption_key_rotation_period</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>여러 세그먼트 후 새 암호화 키로 회전</td>
+          <td>여러 세그먼트 후에 새 암호화 키로 회전</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/content-protection/encoding-settings-encryption.html#encryption_key_url_prefix"><code translate="No">encryption_key_url_prefix</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>키 URL 앞에 전달된 문자열</td>
+          <td>전달 된 문자열을 키 URL 앞에 추가</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/content-protection/encoding-settings-encryption.html#encryption_iv"><code translate="No">encryption_iv</code></a></td>
@@ -1968,42 +1321,42 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td><a href="/encoding-settings/content-protection/encoding-settings-encryption.html#encryption_password"><code translate="No">encryption_password</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>초기화 벡터를 생성하는 데 사용할 암호를 설정합니다</td>
+          <td>초기화 벡터 생성에 사용할 비밀번호를 설정합니다.</td>
         </tr>
       </tbody>
     </table>
   </section>
   <section class="bcls-section">
-    <h2 id="Decryption">암호 해독</h2>
+    <h2 id="Decryption">복호화</h2>
 
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td><a href="/encoding-settings/content-protection/encoding-settings-decryption.html#decryption_method"><code translate="No">decryption_method</code></a></td>
-          <td>aes-128-cbc (설정된<a href="/encoding-settings/content-protection/encoding-settings-decryption.html#decryption_key"><code translate="No">decryption_key</code></a><a href="/encoding-settings/content-protection/encoding-settings-decryption.html#decryption_key_url"><code translate="No">decryption_key_url</code></a>경우)</td>
-          <td>사용할 암호 해독 알고리즘을 설정합니다.</td>
+          <td>as-128-cbc (만약<a href="/encoding-settings/content-protection/encoding-settings-decryption.html#decryption_key"><code translate="No">decryption_key</code></a>또는<a href="/encoding-settings/content-protection/encoding-settings-decryption.html#decryption_key_url"><code translate="No">decryption_key_url</code></a>설정됨)</td>
+          <td>사용할 복호화 알고리즘을 설정합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/content-protection/encoding-settings-decryption.html#decryption_key"><code translate="No">decryption_key</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>사용할 암호 해독 키를 설정합니다.</td>
+          <td>사용할 복호화 키를 설정합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/content-protection/encoding-settings-decryption.html#decryption_key_url"><code translate="No">decryption_key_url</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>사용할 암호 해독 키 파일의 URL입니다.</td>
+          <td>사용할 복호화 키 파일의 URL입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/content-protection/encoding-settings-decryption.html#decryption_password"><code translate="No">decryption_password</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>입력 파일의 암호를 해독하기 위해 키와 함께 사용되는 암호입니다.</td>
+          <td>입력 파일을 해독하기 위해 키와 함께 사용되는 암호입니다.</td>
         </tr>
       </tbody>
     </table>
@@ -2014,16 +1367,16 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td><a href="/encoding-settings/content-protection/encoding-settings-drm.html#drm"><code translate="No">drm</code></a></td>
           <td>{}</td>
-          <td>DRM 해시 옵션</td>
+          <td>DRM 옵션의 해시</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/content-protection/encoding-settings-drm.html#method"><code translate="No">method</code></a></td>
@@ -2033,7 +1386,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td><a href="/encoding-settings/content-protection/encoding-settings-drm.html#provider"><code translate="No">provider</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>사용된 DRM (디지털 권한 관리) 공급자입니다.</td>
+          <td>사용 된 DRM (디지털 권한 관리) 공급자입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/content-protection/encoding-settings-drm.html#key_id"><code translate="No">key_id</code></a></td>
@@ -2063,17 +1416,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td><a href="/encoding-settings/content-protection/encoding-settings-drm.html#content_id"><code translate="No">content_id</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>컨텐츠의 고유 식별자입니다.</td>
+          <td>콘텐츠의 고유 식별자입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/content-protection/encoding-settings-drm.html#content_key"><code translate="No">content_key</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>컨텐츠의 고유 식별자입니다.</td>
+          <td>콘텐츠의 고유 식별자입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/content-protection/encoding-settings-drm.html#schemas"><code translate="No">schemas</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>일반 암호화를 사용할 때 DRM 공급자에 대한 정보입니다.</td>
+          <td>공통 암호화를 사용할 때 DRM 공급자에 대한 정보입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/content-protection/encoding-settings-drm.html#type"><code translate="No">type</code></a></td>
@@ -2083,7 +1436,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td><a href="/encoding-settings/content-protection/encoding-settings-drm.html#license_acquisition_url"><code translate="No">license_acquisition_url</code></a></td>
           <td><span class="none">없음</span></td>
-          <td><code translate="No">Playready CENC DRM</code>스키마에 대한 라이센스 취득 URL입니다.</td>
+          <td><code translate="No">Playready CENC DRM</code>스키마에 대한 라이선스 획득 URL입니다.</td>
         </tr>
       </tbody>
     </table>
@@ -2094,96 +1447,121 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#h264_reference_frames"><code translate="No">h264_reference_frames</code></a></td>
           <td>3</td>
-          <td>H.264 비디오에서 사용할 레퍼런스 프레임 수</td>
+          <td>H.264 비디오에서 사용할 수있는 여러 참조 프레임입니다.</td>
         </tr>
         <tr>
-          <td><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#h264_profile">프로파일</a></td>
-          <td>베이스라인&gt;</td>
-          <td>사용할 H.264 프로파일입니다.</td>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#h264_profile">h264_profile</a></td>
+          <td>기준선&gt;</td>
+          <td>사용할 H.264 프로필입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#h264_level"><code translate="No">h264_level</code></a></td>
-          <td>출력 비디오를 기반으로<a href="http://en.wikipedia.org/wiki/H.264#Levels">H.264 레벨 차트를</a>사용하여 자동으로 계산됩니다.</td>
+          <td>다음을 사용하여 자동 계산<a href="http://en.wikipedia.org/wiki/H.264#Levels"> H.264 레벨 차트</a>출력 비디오를 기반으로 합니다.</td>
           <td>사용할 H.264 수준입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#h264_bframes"><code translate="No">h264_bframes</code></a></td>
           <td>0</td>
-          <td>연속된 B 프레임의 최대 수입니다.</td>
+          <td>연속 B 프레임의 최대 수입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#tuning"><code translate="No">tuning</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>특정 콘텐츠 유형에 맞게 출력 비디오를 튜닝합니다.</td>
+          <td>특정 콘텐츠 유형에 맞게 출력 비디오를 조정합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html#crf"><code translate="No">crf</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>비트레이트 컨트롤 설정입니다.</td>
+          <td>비트 레이트 제어 설정.</td>
         </tr>
       </tbody>
     </table>
-  </section>
+  </section>  
+  <!-- <section class=" bcls-section">
+    <h2 id="Av1">AV1</h2>
+
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Setting</th>
+          <th>Default</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-av1.html#video_codec_level"><code translate="No">video_codec_level</code></a></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="/encoding-settings/formats-codecs/encoding-settings-av1.html#video_codec_profile"><code translate="No">video_codec_profile</code></a></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </section> -->
   <section class="bcls-section">
     <h2 id="HDR10">HDR10</h2>
 
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_red_x"><code translate="No">master_display.red.x</code></a></td>
           <td>없음</td>
-          <td>색상 볼륨 x 빨간색에 대한 설정.</td>
+          <td>빨간색에 대한 색상 볼륨 x 설정.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_red_y"><code translate="No">master_display.red.y</code></a></td>
           <td>없음</td>
-          <td>빨간색에 대한 색상 볼륨 y 설정.</td>
+          <td>빨간색의 색상 볼륨 y 설정.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_green_x"><code translate="No">master_display.green.x</code></a></td>
           <td>없음.</td>
-          <td>녹색의 색상 볼륨 x 설정.</td>
+          <td>녹색에 대한 색상 볼륨 x 설정.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_green_y"><code translate="No">master_display.green.y</code></a></td>
           <td>없음.</td>
-          <td>녹색의 색상 볼륨 y 설정입니다.</td>
+          <td>녹색의 색상 볼륨 y 설정.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_blue_x"><code translate="No">master_display.blue.x</code></a></td>
           <td>없음.</td>
-          <td>블루에 대한 컬러 볼륨 x 설정.</td>
+          <td>파란색의 색상 볼륨 x 설정.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_blue_y"><code translate="No">master_display.blue.y</code></a></td>
           <td>없음.</td>
-          <td>파란색의 색상 볼륨 y 설정입니다.</td>
+          <td>파란색의 색상 볼륨 y 설정.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_white_point_x"><code translate="No">master_display.white_point.x</code></a></td>
           <td>없음.</td>
-          <td>화이트 포인트에 대한 컬러 볼륨 x 설정입니다.</td>
+          <td>화이트 포인트에 대한 색상 볼륨 x 설정.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_white_point_y"><code translate="No">master_display.white_point.y</code></a></td>
           <td>없음.</td>
-          <td>화이트 포인트에 대한 컬러 볼륨 y 설정입니다.</td>
+          <td>화이트 포인트에 대한 색상 볼륨 y 설정.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_luminance_min"><code translate="No">master_display.luminance.min</code></a></td>
@@ -2193,17 +1571,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display_luminance_max"><code translate="No">master_display.luminance.max</code></a></td>
           <td>없음.</td>
-          <td>평방 미터당 니트 또는 칸델라 (cd/m2) 의 최대 광도입니다.</td>
+          <td>평방 미터당 니트 또는 칸델라 (cd/m2) 의 최대 휘도.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#max_content_light_level"><code translate="No">max_content_light_level</code></a></td>
           <td>없음.</td>
-          <td>전체 니트 또는 평방 미터 당 칸델라 (cd/m2) - 정수 값으로 내용에 대한 최대 라이트 레벨.</td>
+          <td>전체 니트 또는 평방 미터당 칸델라 (cd/m2) - 정수 값으로 콘텐츠의 최대 조명 수준.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#max_frame_average_light_level"><code translate="No">max_frame_average_light_level</code></a></td>
           <td>없음.</td>
-          <td>콘텐츠 프레임 니트 또는 칸델라의 최대 평균 광량 수준 (cd/m2) - 정수 값. 최대 10000의 값이 허용되지만 100-200 범위의 값은 일반적으로 최상의 결과를 생성합니다.</td>
+          <td>콘텐츠 프레임 니트 또는 평방 미터당 칸델라의 최대 평균 조명 수준 (cd/m2) - 정수 값입니다. 최대 10000까지의 값이 허용되지만 일반적으로 100-200 범위의 값이 최상의 결과를 생성합니다.</td>
         </tr>
       </tbody>
     </table>
@@ -2214,16 +1592,16 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-flv.html#cue_points"><code translate="No">cue_points</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>FLV 비디오에 이벤트 또는 내비게이션 큐 포인트를 추가합니다.</td>
+          <td>FLV 비디오에 이벤트 또는 탐색 큐 포인트를 추가합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-flv.html#type"><code translate="No">type</code></a></td>
@@ -2233,17 +1611,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-flv.html#time"><code translate="No">time</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>큐 포인트 시간 (초) 입니다.</td>
+          <td>큐 포인트 시간 (초)입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-flv.html#name"><code translate="No">name</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>큐 포인트 이름입니다.</td>
+          <td>큐 포인트 이름.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-flv.html#data"><code translate="No">data</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>큐 포인트 데이터입니다.</td>
+          <td>큐 포인트 데이터.</td>
         </tr>
       </tbody>
     </table>
@@ -2254,31 +1632,31 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html#vp6_temporal_down_watermark"><code translate="No">vp6_temporal_down_watermark</code></a></td>
           <td>20</td>
-          <td>VP6 임시 다운 워터마크 백분율입니다.</td>
+          <td>VP6 임시 다운 워터 마크 백분율.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html#vp6_temporal_resampling"><code translate="No">vp6_temporal_resampling</code></a></td>
-          <td>픽셀 당 비트 수가 적은 인코딩 할 때 True입니다. 그렇지 않으면 false입니다.</td>
-          <td>VP6 임시 리샘플링을 사용하거나 사용하지 않도록 설정합니다.</td>
+          <td>픽셀 당 비트 수가 적은 인코딩의 경우 참입니다. 그렇지 않으면 거짓입니다.</td>
+          <td>VP6 시간적 리샘플링을 활성화 또는 비활성화합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html#vp6_undershoot_pct"><code translate="No">vp6_undershoot_pct</code></a></td>
           <td>90</td>
-          <td>약간 낮은 데이터 레이트를 목표로하십시오.</td>
+          <td>약간 낮은 데이터 속도를 목표로합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html#vp6_profile"><code translate="No">vp6_profile</code></a></td>
           <td>vp6e</td>
-          <td>VP6 프로파일: VP6 또는 VP6e.</td>
+          <td>VP6 프로필: vp6s 또는 vp6e.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html#vp6_compression_mode"><code translate="No">vp6_compression_mode</code></a></td>
@@ -2288,17 +1666,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html#vp6_2pass_min_section"><code translate="No">vp6_2pass_min_section</code></a></td>
           <td>40</td>
-          <td>2 패스 VBR 인코딩의 경우 인코더가 허용하는 가장 낮은 데이터 레이트입니다.</td>
+          <td>2패스 VBR 인코딩의 경우 인코더가 허용하는 가장 낮은 데이터 레이트입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html#vp6_2pass_max_section"><code translate="No">vp6_2pass_max_section</code></a></td>
           <td>400</td>
-          <td>2 패스 VBR 인코딩의 경우 인코더가 허용하는 가장 높은 데이터 레이트입니다.</td>
+          <td>2패스 VBR 인코딩의 경우 인코더가 허용하는 가장 높은 데이터 레이트입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html#vp6_stream_prebuffer"><code translate="No">vp6_stream_prebuffer</code></a></td>
           <td>6</td>
-          <td>재생을 시작하기 전에 필요한 프리로드의 초.</td>
+          <td>재생을 시작하기 전에 필요한 몇 초의 사전로드.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html#vp6_stream_max_buffer"><code translate="No">vp6_stream_max_buffer</code></a></td>
@@ -2307,23 +1685,23 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html#vp6_deinterlace_mode"><code translate="No">vp6_deinterlace_mode</code></a></td>
-          <td>적응적인</td>
-          <td>VP6용 인터레이스 모드</td>
+          <td>적응</td>
+          <td>VP6 용 디인터레이스 모드</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html#vp6_denoise_level"><code translate="No">vp6_denoise_level</code></a></td>
           <td>0</td>
-          <td>VP6에 대한 수준 표시</td>
+          <td>VP6의 노이즈 레벨</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html#alpha_transparency"><code translate="No">alpha_transparency</code></a></td>
-          <td>거짓</td>
-          <td>알파 투명도를 활성화합니다. 현재 VP6에서만 지원됩니다.</td>
+          <td>그릇된</td>
+          <td>알파 투명도를 활성화합니다. 현재는 VP6에서만 지원됩니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html#constant_bitrate"><code translate="No">constant_bitrate</code></a></td>
-          <td>거짓</td>
-          <td>CBR (상수 비트레이트) 인코딩을 사용합니다.</td>
+          <td>그릇된</td>
+          <td>고정 비트 레이트 (CBR) 인코딩을 사용하십시오.</td>
         </tr>
       </tbody>
     </table>
@@ -2334,21 +1712,21 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-mp4.html#hint"><code translate="No">hint</code></a></td>
-          <td>거짓</td>
-          <td>RTP/RTSP에 대해 MP4 파일의 힌트를 활성화합니다.</td>
+          <td>그릇된</td>
+          <td>RTP / RTSP 용 MP4 파일의 힌트를 활성화합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-mp4.html#mtu_size"><code translate="No">mtu_size</code></a></td>
           <td>1450</td>
-          <td>MP4 힌팅의 MTU 크기를 설정합니다.</td>
+          <td>MP4 힌트에 대한 MTU 크기를 설정합니다.</td>
         </tr>
       </tbody>
     </table>
@@ -2359,21 +1737,21 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-aac.html#max_aac_profile"><code translate="No">max_aac_profile</code></a></td>
-          <td>헤아악</td>
-          <td>허용되는 가장 진보 된 (압축) AAC 프로필은 무엇입니까?</td>
+          <td>he-aac</td>
+          <td>허용 할 수있는 가장 진보 된 (압축 된) AAC 프로필은 무엇입니까?</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/formats-codecs/encoding-settings-aac.html#force_aac_profile"><code translate="No">force_aac_profile</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>Zencoder가 비트 전송률에 가장 적합한 프로파일을 선택하도록 하는 대신 특정 AAC 프로파일을 강제로 사용합니다.</td>
+          <td>Zencoder가 비트 전송률에 가장 적합한 프로필을 선택하도록하는 대신 특정 AAC 프로필을 강제로 사용합니다.</td>
         </tr>
       </tbody>
     </table>
@@ -2384,9 +1762,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
@@ -2398,17 +1776,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-broadcast.html#format_preset"><code translate="No">format_preset</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>특정 산업 표준과의 호환성을 허용하는 형식 사전 설정</td>
+          <td>특정 산업 표준과의 호환성을 허용하는 형식 사전 설정.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-broadcast.html#ts_muxrate"><code translate="No">ts_muxrate</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>전송 스트림이 muxed될 수 있는 최대 속도 (kbps) 입니다. ts 형식에만 사용됩니다.</td>
+          <td>전송 스트림을 다중화 할 수있는 최대 속도 (kbps)입니다. ts 형식에만 사용됩니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-broadcast.html#ts_pmt_pid"><code translate="No">ts_pmt_pid</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>프로그램 맵 테이블의 패킷 ID를 재정의합니다.</td>
+          <td>프로그램 맵 테이블의 패킷 ID를 대체하십시오.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-broadcast.html#ts-video-pid"><code translate="No">ts_video_pid</code></a></td>
@@ -2423,16 +1801,16 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-broadcast.html#ts_pcr_pid"><code translate="No">ts_pcr_pid</code></a></td>
           <td><span class="none">없음</span></td>
-          <td>프로그램 클럭 참조의 패킷 ID를 재정의합니다.</td>
+          <td>Program Clock Reference의 패킷 ID를 재정의합니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-broadcast.html#ts_cbr"><code translate="No">ts_cbr</code></a></td>
-          <td>거짓</td>
+          <td>그릇된</td>
           <td>전송 스트림 계층에서 패킷을 채워 CBR 출력 생성</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-broadcast.html#lossless_video"><code translate="No">lossless_video</code></a></td>
-          <td>거짓</td>
+          <td>그릇된</td>
           <td>비디오 코덱에서 지원하는 경우 무손실 비디오 인코딩을 활성화합니다.</td>
         </tr>
       </tbody>
@@ -2444,181 +1822,53 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td><a href="/encoding-settings/sources-destinations/encoding-settings-aspera.html#aspera_transfer_policy"><code translate="No">aspera_transfer_policy</code></a></td>
-          <td>공정</td>
+          <td>공정한</td>
           <td>Aspera 파일 전송에 사용 가능한 대역폭을 할당하는 방법.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/sources-destinations/encoding-settings-aspera.html#transfer_minimum_rate"><code translate="No">transfer_minimum_rate</code></a></td>
           <td>1000</td>
-          <td>데이터 전송 최소의 목표 속도 (Kbps) 입니다.</td>
+          <td>최소 데이터 전송 속도 (Kbps)입니다.</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/sources-destinations/encoding-settings-aspera.html#transfer_maximum_rate"><code translate="No">transfer_maximum_rate</code></a></td>
           <td>250000</td>
-          <td>데이터 전송 최대값에 대한 목표 속도 (Kbps) 입니다.</td>
+          <td>데이터 전송 최대 값에 대한 목표 속도 (Kbps)입니다.</td>
         </tr>
       </tbody>
     </table>
   </section>
   <section class="bcls-section">
-    <h2 id="Transmuxing">트랜스먹싱</h2>
+    <h2 id="Transmuxing">트랜스 먹싱</h2>
 
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>설정</th>
-          <th>기본값</th>
-          <th>설명</th>
+          <th>환경</th>
+          <th>기본</th>
+          <th>기술</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-transmuxing.html#copy_video"><code translate="No">copy_video</code></a></td>
-          <td>거짓</td>
+          <td>그릇된</td>
           <td>입력 파일의 비디오 트랙 복사</td>
         </tr>
         <tr>
           <td><a href="/encoding-settings/general-audio-video/encoding-settings-transmuxing.html#copy_audio"><code translate="No">copy_audio</code></a></td>
-          <td>거짓</td>
+          <td>그릇된</td>
           <td>입력 파일의 오디오 트랙 복사</td>
         </tr>
       </tbody>
     </table>
   </section>
 </article>
-<!-- complete bootstrap layout -->
-    </div>
-    <div class="col-sm-2 right-side-bar">
-      
-      <nav class="right-side-nav" id="right_side_nav">
-        <h6 class="toc">페이지 내용</h6>
-        <ul id="in_page_nav" class="list-none"></ul>
-      </nav>
-      
-    </div>
-  </div>
-</div>
-
-<hr>
-<footer class="bcls-footer" role="contentinfo">  <div class="row">
-    <div class="region region-footer-top-center col-md-12">
-      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
-
-        <h2>브라이트코브 지원</h2>
-
-        <ul class="menu">
-          <li>
-            <a href="https://status.brightcove.com">시스템 상태</a>
-          </li>
-          <li>
-            <a href="https://supportportal.brightcove.com/s/login/?">고객 지원 문의</a>
-          </li>
-          <li>
-            <a href="https://support.brightcove.com/">문서화</a>
-          </li>
-        </ul>
-
-      </nav>
-      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
-
-        <h2>교육</h2>
-
-        <ul class="menu">
-          <li>
-            <a href="https://studio.support.brightcove.com/training/online-training-courses.html">온라인 강좌</a>
-          </li>
-          <li>
-            <a href="https://studio.support.brightcove.com/training/register-training.html">강좌 등록</a>
-          </li>
-          <li>
-            <a href="https://university.brightcove.com/">브라이트코브 대학교</a>
-          </li>
-        </ul>
-
-      </nav>
-      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
-
-        <h2>Brightcove</h2>
-
-        <ul class="menu">
-          <li>
-            <a href="https://www.brightcove.com">브라이트코브닷컴</a>
-          </li>
-          <li>
-            <a href="https://supportportal.brightcove.com/s/login/?">연락처</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-  <div class="row">
-    <div class="region region-footer-bottom-center col-md-12">
-      <div class="bcls-copyright footer-menu">
-        <table>
-          <tr>
-            <td>
-              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> 브라이트코브 Inc. 모든 판권 소유.</div>
-            </td>
-            <td><a href="https://www.brightcove.com/en/legal/privacy">개인 정보 보호</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">이용 약관</a></td>
-            <td>
-              <div class="gf-links-cols footer-menu">
-                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
-                </div>
-              </div>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script>
-      
-  var searchBox = sajari.init({
-    mode: "search-box",
-    project: "1588255093746585379", // Set this to your project.
-    collection: "brightcove-documenation", // Set this to your collection.
-    instantPipeline: "autocomplete", // Pipeline used as you type
-    inputPlaceholder: "Search", // Input element placeholder
-    maxSuggestions: 5, // Maximum number of suggestions to show
-    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
-  });
-  
-    searchBox("sub", "pipeline.search-sent", function (_, query) {
-      window.location = "/search.html?q=" + encodeURIComponent(query.q);
-    });
-  
-
-</script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/https-fix.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/setDate.js"></script>
-  
-  <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
-  
-  <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script>
-  <script src="/assets/js/sites_nav.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/bcls-utils.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/local-link-fix.js"></script>
-  <script src="/assets/js/feedback.js"></script>
-  
-  <script src="/assets/js/sajari-search-foot.js"></script>
-  
-  <!-- <script src="/assets/js/sajari-index.js"></script> -->
-  <!-- <script src="https://sdk.amazonaws.com/js/aws-sdk-2.677.0.min.js"></script> -->
-</body>
-
-</html>

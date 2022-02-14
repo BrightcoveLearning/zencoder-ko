@@ -1,0 +1,160 @@
+
+---
+title: 포렌식 워터마킹 설정
+description: '이 항목에서는 포렌식 워터마킹에 대한 설정에 대한 정보를 제공합니다.'
+parent: Content Protection Settings 
+grandparent: Encoding Settings
+---
+ <h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <h2 id="Introduction">소개</h2>
+    <p>포렌식 워터마킹은 불법 복제 및 무단 콘텐츠 공유로부터 프리미엄 콘텐츠를 보호하는 데 도움이 됩니다. 이 기능은 또한 콘텐츠 유출의 원인을 신속하게 식별하여 조치를 취할 수 있도록 도와줍니다. <a href="/encoding-guides/forensic-watermarking.html">포렌식 워터마킹 사용에</a>대한 요구 사항에 대한 자세한 내용은 포렌식 워터마킹을 참조하십시오.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="forensic_watermark">포렌식 워터마크</h2>
+    <code translate="No">forensic_watermark:String</code>
+
+    <p><strong>API 버전:</strong> V2</p>
+
+    <p><strong>상위: </strong><a href="/encoding-settings/general/encoding-settings-job.html#outputs">출력</a></p>
+
+    <p><strong>유효한 값:</strong> "아", "비"</p>
+
+    <aside class="bcls-aside bcls-aside--information">하나의 출력과 두 번째 출력에<code translate="No">A</code><code translate="No">B</code>대해 로 설정해야 합니다.</aside>
+
+    <p><strong>호환되는 작업 유형:</strong> vod</p>
+
+    <p><strong>예:</strong> ㅏ</p>
+
+    <p><strong>기술:</strong></p>
+
+    <p>Zencoder에서 포렌식 워터마킹으로 출력을 생성하려면 비디오당 2개의 출력을 지정해야 합니다. <strong translate="no"> NS</strong>그리고<strong translate="no"> NS</strong>각 출력의 세그먼트를 서로 다른 시퀀스로 혼합하여 재생을 위해 다양한 워터마크가 표시된 "비디오"를 생성할 수 있습니다(예: 아바바바, 아바바바바, 바바바바 등).</p>
+
+    <aside class="bcls-aside bcls-aside--information language-editable">참고 사항: 
+      <ul>
+        <li>5분보다 짧은 동영상에 포렌식 워터마킹을 추가할<strong></strong>수 없습니다.</li>
+        <li><code translate="No">segment_seconds</code><strong>로</strong>설정해야 합니다. <code translate="No">2</code>그렇지 않으면 포렌식 워터마킹이 추가되지 않습니다.</li>
+      </ul>
+    </aside>
+
+<pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "input": "s3://zencodertesting/test.mov",
+  "outputs": [
+    {
+      "base_url": "s3://urlTest",
+      "filename": "contextAwareEncoding1_A.m4f",
+      "public": false,
+      "format": "m4f",
+      "label": "m4f-contextAwareEncoding1-A-b30e1",
+      "generate_mp4_atom_map": true,
+      "Mp4_atom_map_filename": "contextAwareEncod-A-atom_map.json",
+      "skip_audio": true,
+      <span class="bc-highlight">"forensic_watermark": "A"</span>,
+      "dynamic_profile_rendition": 1,
+      "skip": {
+          "require_video": true
+      },
+      "fragment_duration": 2000,
+      <span class="bc-highlight">"segment_seconds": 2</span>,
+      "headers": {
+          "x-amz-server-side-encryption": "AES256"
+      }
+    },
+    {         
+      "base_url": "s3://urlTest",
+      "filename": "contextAwareEncoding1_B.m4f",
+      "public": false,
+      "format": "m4f",
+      "label": "m4f-contextAwareEncoding1-B-e348",
+      "generate_mp4_atom_map": true,
+      "mp4_atom_map_filename": "contextAwareEncod-B-atom_map.json",
+      "skip_audio": true,
+      <span class="bc-highlight">"forensic_watermark": "B"</span>,
+      "dynamic_profile_rendition": 1,
+      "skip": {
+          "require_video": true
+      },
+      "fragment_duration": 2000,
+      <span class="bc-highlight">"segment_seconds": 2</span>,
+      "headers": {
+          "x-amz-server-side-encryption": "AES256"
+      }
+    }
+  ]
+}</code></pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="forensic_watermark_stub_mode">forensic_watermark_stub_mode</h2>
+    <code translate="No">forensic_watermark_stub_mode:Boolean</code>
+
+    <p><strong>API 버전:</strong> V2</p>
+
+    <p><strong>상위: </strong><a href="/encoding-settings/general/encoding-settings-job.html#outputs">출력</a></p>
+
+    <p><strong>유효한 값:</strong>참, 거짓</p>
+
+    <p><strong>기본값:</strong> false</p>
+
+    <p><strong>호환되는 작업 유형:</strong> vod</p>
+
+    <p><strong>예:</strong> true</p>
+
+    <p><strong>기술:</strong></p>
+
+    <p>NS <strong>통합 테스트 목적으로 사용</strong> Zencoder에서 포렌식 워터마킹으로 출력을 생성합니다. 와<code translate="No">true</code><a href="#forensic_watermark"><code translate="No">forensic_watermark</code></a>함께 로 설정하면 이 플래그로 인해 표시되는 워터마크가 생성됩니다 (포렌식 워터마킹이 성공적으로 추가되고 있는지 확인합니다.)</p>
+
+    <p>테스트가 완료되면<code translate="No">forensic_watermark_stub_mode</code>플래그를 생략하거나 로 설정하여 작업을 다시 실행하여 보이지 않는 출력을 가져와야 합니다. <code translate="No">false</code>워터마크.</p>
+
+<pre class="line-numbers">
+  <code class="language-json" translate="No">{
+    "input": "s3://zencodertesting/test.mov",
+    "outputs": [
+      {
+        "base_url": "s3://urlTest",
+        "filename": "contextAwareEncoding1_A.m4f",
+        "public": false,
+        "format": "m4f",
+        "label": "m4f-contextAwareEncoding1-A-b30e1",
+        "generate_mp4_atom_map": true,
+        "Mp4_atom_map_filename": "contextAwareEncod-A-atom_map.json",
+        "skip_audio": true,
+        <span class="bc-highlight">"forensic_watermark": "A"</span>,
+        <span class="bc-highlight">"forensic_watermark_stub_mode": true</span>,
+        "dynamic_profile_rendition": 1,
+        "skip": {
+            "require_video": true
+        },
+        "fragment_duration": 2000,
+        "segment_seconds": 2,
+        "headers": {
+            "x-amz-server-side-encryption": "AES256"
+        }
+    },
+    {         
+        "base_url": "s3://urlTest",
+        "filename": "contextAwareEncoding1_B.m4f",
+        "public": false,
+        "format": "m4f",
+        "label": "m4f-contextAwareEncoding1-B-e348",
+        "generate_mp4_atom_map": true,
+        "mp4_atom_map_filename": "contextAwareEncod-B-atom_map.json",
+        "skip_audio": true,
+        <span class="bc-highlight">"forensic_watermark": "B"</span>,
+        <span class="bc-highlight">"forensic_watermark_stub_mode": true</span>,
+        "dynamic_profile_rendition": 1,
+        "skip": {
+            "require_video": true
+        },
+        "fragment_duration": 2000,
+        "segment_seconds": 2,
+        "headers": {
+            "x-amz-server-side-encryption": "AES256"
+        }
+    }
+  ]
+}</code></pre>
+        </section>
+</article>
