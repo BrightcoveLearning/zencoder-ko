@@ -1,0 +1,1785 @@
+﻿<!DOCTYPE html>
+<html lang="ko"> 
+    <head>
+        <title>CAE 가이드</title>
+        
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex,nofollow"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="CAE (컨텍스트 인식 인코딩) 는 각 소스 비디오를 분석하고 각 컨텐츠에 대한 사용자 정의 비트레이트 래더 (변환 세트) 를 지능적으로 구축합니다. 또한 컨텍스트 인식 인코딩은 콘텐츠를 보는 데 사용되는 전송 네트워크 및 장치와 관련된 제약 조건을 고려합니다. 모든 제목에서 일관된 품질 수준을 유지하면서 필요한 변환 수와 각 변환에 사용할 해상도 및 비트 전송률을 결정합니다. 따라서 저장 공간 및 대역폭 비용을 대폭 절감하는 동시에 사용자의 재생 환경을 개선할 수 있습니다. 추가 정보는컨텍스트 인식 인코딩 개요 .">
+        
+        <!-- Google Font -->
+        <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css">
+        <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
+        
+        <!-- FontAwesome JS-->
+        <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>  
+        
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.css">
+
+        <!-- Theme CSS -->  
+        <link id="theme-style" rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/css/theme.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/prism.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/custom-css/styles.css">
+
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XBJC11HF8Z"></script>
+        <script translate="no">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-XBJC11HF8Z');
+        </script>
+        <script src="/assets/s-site-assets-scripts/sixth-sense.js"></script>
+        <script src="/assets/s-site-assets-scripts/sajari-head.js"></script>
+        <script src="/assets/s-site-assets-scripts/feather.min.js"></script>
+
+    </head> 
+
+    <body class="docs-page">
+
+
+<header class="header fixed-top">
+  <div class="branding docs-branding">
+    <div class="container-fluid position-relative py-2">
+      <div class="docs-logo-wrapper">
+        <button id="docs-sidebar-toggler" class="docs-sidebar-toggler"
+          type="button">
+          <span></span> <span></span> <span></span>
+        </button>
+        <div class="site-logo"><a class="navbar-brand" href="https://support.brightcove.com/" style="margin-left: 15px;"> <img class="logo-icon me-2" src="/assets/s-site-assets-template-stylesheets/images/bc_logo_black_1@1x.png" alt="로고" style="margin-bottom: 9px;"/>
+            <!-- <span class="logo-text">BRIGHTCOVE</span> -->
+          </a></div>
+      </div><!--//docs-logo-wrapper-->
+
+      <div class="docs-top-utilities d-flex justify-content-end
+        align-items-center">
+        
+        <!-- Search bar -->
+        <div id="nav-search-box" class="top-search-box d-none d-lg-flex" style="margin-right: 10px ;"></div>
+
+<select id="site_select" class="form-select select-focus" style="width:
+          20%; margin-right: 10px;" translate="no">
+          <option value="">Other Brightcove Docs</option>
+          
+          
+          <option value="https://support.brightcove.com" translate="no">Documentation Home</option>
+          
+          
+          
+          <option value="https://support.brightcove.com/" translate="no">-- VIDEO CLOUD --</option>
+          
+          
+          
+          <option value="https://studio.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Studio</option>
+          
+          
+          
+          <option value="https://mstudio.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Marketing Studio</option>
+          
+          
+          
+          <option value="https://player.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Player Development</option>
+          
+          
+          
+          <option value="https://apis.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Platform APIs</option>
+          
+          
+          
+          <option value="https://sdks.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Device SDKs</option>
+          
+          
+          
+          <option value="https://integrations.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Integrations and CMS Connectors</option>
+          
+          
+          
+          <option value="https://general.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud General Information</option>
+          
+          
+          
+          <option value="https://support.brightcove.com/" translate="no">-- VIDEO ESSENTIALS --</option>
+          
+          
+          
+          <option value="https://audience-insights.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Audience Insights</option>
+          
+          
+          
+          <option value="https://beacon-help.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Studio</option>
+          
+          
+          
+          <option value="https://beacon.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Classic</option>
+          
+          
+          
+          <option value="https://corptv.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;CorpTV</option>
+          
+          
+          
+          <option value="https://live.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Live</option>
+          
+          
+          
+          <option value="https://zencoder.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Zencoder</option>
+          
+          
+          
+          <option value="https://support.brightcove.com/" translate="no">-- VIDEO CLOUD ADD-ONS --</option>
+          
+          
+          
+          <option value="https://gallery.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Gallery</option>
+          
+          
+          
+          <option value="https://studio.support.brightcove.com/social/index.html" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Social</option>
+          
+          
+          
+          <option value="https://interactivity.support.brightcove.com/index.html" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Interactivity</option>
+          
+          
+          
+          <option value="https://ssai.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove SSAI</option>
+          
+          
+          
+          <option value="https://campaign.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Campaign</option>
+          
+          
+        </select>
+
+        <select id="language_select" class="form-select select-focus" style="width: 10%;"
+          onchange="doGTranslate(this);" translate="no">
+          <!-- <option value="">Select Language</option> -->
+          <option value="en|en" translate="No">English</option>
+          <option value="en|zh-TW" translate="No">繁體中文</option>
+          <option value="en|fr" translate="No">Français</option>
+          <option value="en|de" translate="No">Deutsche</option>
+          <option value="en|ja" translate="No">日本語</option>
+          <option value="en|ko" translate="No">한국어</option>
+          <option value="en|es" translate="No">Español</option>
+        </select>
+
+        <script translate="no">
+          /* <![CDATA[ */
+          function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+          /* ]]> */
+        </script>
+      </div>
+    </div>
+  </div>
+</header><!--//header-->
+
+<div class="docs-wrapper">
+  <div id="docs-sidebar" class="docs-sidebar" style="padding-right: 15px;">
+    <div id="nav-search-box" class="top-search-box d-lg-none p-3"></div>
+    <div class="row">
+      
+        <div id="side_nav" style="margin-left: 1em; display: inline-block; border-right: 1px solid #e5e5e6; padding-right: 1em;">
+          
+          <nav class="docs-nav sidenav" aria-label="Main">
+            <ul class="site-nav" style="list-style-type: none;">
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/index.html">홈</a></li>
+            
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/getting-started/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;시작하기</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/getting-started/overview-zencoder.html">개요</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/getting-started/quick-start-zencoder.html">빠른 시작</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/getting-started/getting-api-key.html">API 키 가져오기</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/getting-started/output-settings.html">출력 설정</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/getting-started/creating-multiple-outputs.html">다중 출력 생성</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/general-information/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;일반 정보</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general-information/faq-basics.html">기본 사항</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general-information/faq-codecs-and-formats.html">코덱 및 형식</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general-information/faq-encoding.html">인코딩</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general-information/faq-file-transfers.html">파일 전송</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general-information/faq-zencoder-pricing.html">Zencoder 가격 책정</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general-information/faq-rate-limiting.html">속도 제한</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general-information/supported-video-and-audio-formats-codecs-and-containers.html">지원되는 비디오 및 오디오 형식</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general-information/overview-context-aware-encoding.html">개요: 컨텍스트 인식 인코딩</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general-information/getting-notifications-when-videos-are-finished.html">비디오 완료 시 알림 받기</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general-information/how-zencoder-saves-your-files-when-uploads-fail.html">업로드 실패 시 Zencoder가 파일을 저장하는 방법</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general-information/using-zencoder-s3.html">S3에서 젠코더 사용</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general-information/using-zencoder-azure.html">Azure에서 젠코더 사용</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general-information/using-zencoder-google-cloud-platform.html">Google 클라우드 스토리지에서 Zencoder를 사용하기</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/references/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;참고 문헌</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/reference.html">API 참조</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/known-issues.html">알려진 문제</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/release-notes.html">제품 업데이트</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/encoding-settings/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;인코딩 설정</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/encoding-settings/general/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;일반 설정</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/general/encoding-settings-job.html">작업 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/general/encoding-settings-general-output-settings.html">일반 출력 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/general/cae-settings.html">CAE 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/general/encoding-settings-conditional-outputs.html">조건부 출력 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/general/encoding-settings-notifications.html">알림 설정</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/encoding-settings/general-audio-video/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;오디오/비디오 설정</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/general-audio-video/encoding-settings-audio.html">오디오 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/general-audio-video/encoding-settings-audio-processing.html">오디오 처리 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/general-audio-video/encoding-settings-video.html">비디오 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html">비디오 처리 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/general-audio-video/encoding-settings-broadcast.html">브로드캐스트 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/general-audio-video/encoding-settings-frame-rate.html">프레임 속도 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html">요율 제어 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/general-audio-video/encoding-settings-resolution.html">해상도 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html">세그먼트화된 스트리밍 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/general-audio-video/encoding-settings-transmuxing.html">변환 설정</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/encoding-settings/formats-codecs/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;포맷 및 코덱 설정</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html">형식 및 코덱 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/formats-codecs/encoding-settings-aac.html">AAC 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/formats-codecs/encoding-settings-flv.html">FLV 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html">HDR 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/formats-codecs/encoding-settings-h264.html">H.264 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/formats-codecs/encoding-settings-mp4.html">MP4 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/formats-codecs/encoding-settings-vp6.html">VP6 설정</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/encoding-settings/assets/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;미디어 에셋 설정</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/assets/encoding-settings-auto-captions.html">자동 자막</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/assets/encoding-settings-captions.html">캡션 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/assets/encoding-settings-clips.html">클립 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/assets/encoding-settings-thumbnails.html">썸네일 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/assets/encoding-settings-watermarks.html">워터마크 설정</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/encoding-settings/content-protection/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;콘텐츠 보호 설정</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/content-protection/encoding-settings-encryption.html">암호화 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/content-protection/encoding-settings-decryption.html">암호 해독 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/content-protection/encoding-settings-drm.html">DRM 설정</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/encoding-settings/sources-destinations/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;소스/대상 설정</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html">S3 설정</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/encoding-settings/sources-destinations/encoding-settings-aspera.html">아스페라 설정</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/encoding-guides/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;인코딩 가이드</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/encoding-guides/advanced-audio-mapping-guide.html">오디오 매핑 가이드</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/encoding-guides/as11-mxf.html">AS-11-MXF 가이드</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/encoding-guides/avc-intra-guide.html">AVC-인트라 가이드</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/encoding-guides/cae-guide.html">CAE 가이드</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/encoding-guides/creating-mp4-and-hls-outputs-together.html">트랜스머싱 가이드</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/encoding-guides/dash-streaming-and-playlists.html">DASH 스트리밍 및 재생 목록</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/encoding-guides/h264-advanced-guide.html">H.264 고급 가이드</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/encoding-guides/hdr10-video-output.html">지원되는 HDR 비디오 형식</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/encoding-guides/hevch265-guide.html">HEVC/H.265 가이드</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/encoding-guides/highwinds-smil.html">하이윈즈 SMIL 가이드</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/encoding-guides/html5-encoding.html">HTML5 인코딩</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/encoding-guides/http-live-segmented-streaming-and-playlists.html">HLS 스트리밍 및 재생 목록</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/encoding-guides/http-live-streaming-using-fragmented-mp4.html">조각난 MP4를 사용하는 HLS</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/encoding-guides/iosmobile-encoding.html">iOS/모바일 인코딩 가이드</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/encoding-guides/microsoft-smooth-streaming.html">마이크로소프트 소프트 스트리밍</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/encoding-guides/using-quality-based-encoding-modes-streaming-video.html">스트리밍을 위한 품질 기반 인코딩 모드</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/encoding-guides/vp6-advanced-guide.html">VP6 고급 가이드</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/encoding-guides/vp9-guide.html">VP9 가이드</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/error-troubleshooting/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;오류/문제 해결</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/problems.html">일반적인 문제</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/region-outages.html">지역 운영 중단</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/when-should-i-retry-failed-jobs.html">실패한 작업을 다시 시도해야 하는 경우</a></li>
+              
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/error-troubleshooting/error-codes/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;오류 코드</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-akamainetstoragefilesizeerror.html">아카메인스토리지파일 크기 오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-checksummismatcherror.html">체크섬미일치 오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-dimensiontoosmallerror.html">치수작은 오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-downloadaccessdeniederror.html">다운로드액세스데인오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-downloadfailureerror.html">다운로드 실패오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-downloadtimeouterror.html">다운로드타임아웃테러</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-filenotfounderror.html">파일이름창업자 오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-filepermanentlymovederror.html">파일영구 이동오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-inaccuratedurationerror.html">부정확한 기간 오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-incompatiblewithdynamicprofileserror.html">동적 프로필과 호환되지 않습니다오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-inputfilenotfound.html">입력파일찾았습니다.</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-invalidaccesskeyiderror.html">유효하지 않은 액세스 키오류오류입니다.</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-invalidaudiosettingserror.html">유효하지 않음오디오 설정오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-invalidcodeccombinationerror.html">유효하지 않은 코드조합 오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-invaliddownloadedfiletypeerror.html">다운로드된 파일 유형 오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-invalidencryptionsettingserror.html">유효하지 않은 암호화설정설정오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-invalidfilepatherror.html">유효하지 않은 파일패더러</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-invalidformatcodecerror.html">유효하지 않은 형식코드 작성기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-invalidframerateerror.html">잘못된 프레임오류입니다.</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-invalidusernameorpassworderror.html">유효하지 않은 사용자 이름이나 암호오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-invalidvideobitrateerror.html">유효하지 않음비디오비디오오류입니다.</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-invalidvideosettingserror.html">유효하지 않음비디오설정오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-nomediaerror.html">미디어 오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-quicktimereferenceerror.html">빠른 시간 참조오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-remoteserverproblemerror.html">원격 서버문제오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-rtmpauthfailederror.html">RTMP인증 실패 오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-rtmpmaxstreamsxidreached.html">RTMP맥스스트림시드레이드된</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-rtmpstreamnamealreadyinuse.html">Rtmp스트림 이름미리 사용</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-s3bucketnotfounderror.html">S3버킷명설립자</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-segmentingerror.html">세그먼트화 오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-skippedsourceerror.html">건너뛰기소스오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-thumbnailerror.html">썸네일 오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-transcodingerror.html">트랜스코딩 오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-transferinvalidgranteegroupurlerror.html">전송። 유효하지 않은부여그룹오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-transferinvalidgranteeiderror.html">전송። 무효부여여여여승</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-truncatedfileerror.html">잘라낸 파일 오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-unabletocreatedynamicprofileserror.html">동적 프로파일을 생성할 수 없음오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-unexpecteddownloadproblemerror.html">다운로드문제오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-unexpectedffmpegresult.html">분류: Ffmpegresult</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-unexpectedmplayerresult.html">레이어결과</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-unexpectedprogenresult.html">트프로젠결과</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-unexpectedresulterror.html">결과오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-unexpecteduploadproblemerror.html">로드문제 오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-unexpectedx264result.html">결과X264결과</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-unreadablefileerror.html">읽을 수 없는 파일오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-unsupportedcodecerror.html">지원되지 않는 코드 작성기</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-unsupportedencodingerror.html">지원되지 않은코드오류입니다.</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-unsupportedencryptionerror.html">지원되지 않음암호화 오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-unsupportedtranscodecombinationerror.html">지원되지 않는 코드 변환 조합 오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-uploadaccessdeniederror.html">업로드액세스거부 오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-uploadfailureerror.html">업로드 실패오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-uploadservernotfounderror.html">업로드서버이름창업자 오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-uploadtimeouterror.html">업로드시간 초과 오류</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/error-troubleshooting/error-codes/error-workertimeouterror.html">노동자시간 외계자</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/integration/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;통합</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/integration/faq-integration-libraries.html">통합 라이브러리</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/integration/100-integration-reliability.html">100% 통합 신뢰성</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/integration/test-jobs-and-integration-mode.html">테스트 작업 및 통합 모드</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/integration/using-read-only-api-keys.html">읽기 전용 API 키 사용</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/support/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;서포트</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/viewing-brightcove-system-status-page.html">브라이트코브 시스템 상태 페이지 보기</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/contact-sales.html">영업팀에 문의</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/opening-case-with-brightcove-support.html">지원 사례 열기</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/reset-support-portal-password.html">지원 포털 비밀번호 재설정</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+          </ul>
+          </nav>
+        </div>
+      </div>
+    </div><!--//docs-sidebar-->
+  </div>
+</div>
+
+<div style="margin-top: 20px;">
+  <div class="docs-content" style="padding-bottom: 0px;">
+    <div class="container">
+      <div class="docs-overview">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/">홈</a></li>
+            
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/encoding-guides/">인코딩 가이드</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">CAE 가이드</li>
+            
+            
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="docs-content">
+  <div class="container">
+    <div class="docs-overview py-5">
+      
+      <div class="centered-inpage-nav" id="centered_inpage_nav">
+        <nav id="centered_toc">
+          <select id="centered_in_page_toc" class="form-select select-focus"></select>
+        </nav>
+      </div>
+      <br/>
+      
+      
+<h1>CAE 가이드</h1>
+<article class="bcls-article">
+  <summary>CAE (컨텍스트 인식 인코딩) 는 각 소스 비디오를 분석하고 각 컨텐츠에 대한 사용자 정의 비트레이트 래더 (변환 세트) 를 지능적으로 구축합니다. 또한 컨텍스트 인식 인코딩은 콘텐츠를 보는 데 사용되는 전송 네트워크 및 장치와 관련된 제약 조건을 고려합니다. 모든 제목에서 일관된 품질 수준을 유지하면서 필요한 변환 수와 각 변환에 사용할 해상도 및 비트 전송률을 결정합니다. 따라서 저장 공간 및 대역폭 비용을 대폭 절감하는 동시에 사용자의 재생 환경을 개선할 수 있습니다. 추가 정보는<a href="/general-information/overview-context-aware-encoding.html">컨텍스트 인식 인코딩 개요</a> .</summary>
+
+  <section class="bcls-section">
+    <h2 id="Overview">참고 사항</h2>
+
+    <aside class="bcls-aside bcls-aside--information">
+      <ul>
+        <li>인코딩 필드에 대한 자세한 내용은 다음을 참조하세요. <a href="/encoding-settings/general/cae-settings.html"></a></li>
+        <li>모든 Zencoder 고객은 컨텍스트 인식 인코딩을 사용할 수 없습니다. 컨텍스트 인식 인코딩을 사용할 수 있는지 여부에 대해 질문이 있는 경우 고객 성공 관리자에게 문의하십시오.</li>
+        <!-- <li>The <a href="/encoding-guides/av1-guide.html">AV1 video codec</a> is currently not supported for CAE jobs.</li> -->
+      </ul>
+    </aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="process">프로세스</h2>
+
+    <p>CAE는 젠코더 출력을 설정하여 젠코더<code translate="No">"type": "cae"</code>작업에서 활성화됩니다. 또한 구성할<code translate="No">cae_options</code>수도 있습니다.</p>
+    <p>Zencoder <code translate="No">"type": "cae"</code>출력은 지정된 입력에서 컨텍스트 인식 프로필 생성기를 실행하고 json 파일로 생성된 결과 프로필이 사용자가 제공한 위치에 업로드됩니다.</p>
+
+    <p>생성된 프로필 json에는 래더의 각 변환을 인코딩하는 데 사용되는 다음 설정이 포함되어 있습니다.</p>
+
+    <ul>
+      <li><code translate="No">width</code></li>
+      <li><code translate="No">height</code></li>
+      <li><code translate="No">frame_rate</code></li>
+      <li><code translate="No">video_codec</code></li>
+      <li><code translate="No">video_codec_profile</code></li>
+      <li><code translate="No">video_codec_tier</code></li>
+      <li><code translate="No">video_codec_level</code></li>
+      <li><code translate="No">video_reference_frames</code></li>
+      <li><code translate="No">video_bframes</code></li>
+      <li><code translate="No">video_bitrate</code></li>
+      <li><code translate="No">decoder_bitrate_cap</code></li>
+      <li><code translate="No">decoder_buffer_size</code></li>
+      <li><code translate="No">keyframe_rate</code></li>
+      <li><code translate="No">fixed_keyframe_interval</code></li>
+    </ul>
+    <p>Zencoder가 렌디션을 자동으로 인코딩하려면 종속 출력이 추가로 필요하며 각 출력에는<code translate="No">cae_rendition</code> set가 필요합니다. a가<code translate="No">cae_rendition</code>없는 다른 출력은 입력 소스를 검사하는 즉시 동적 프로파일 생성기가 실행되는 동안 동시에 인코딩을 시작합니다.</p>
+    <h3>샘플 요청</h3>
+<pre class="line-numbers"><code class="language-json" translate="No">{
+  "input": "s3://test_bucket/test_media.mp4",
+  "outputs": [
+    {
+      "type": "cae",
+      "label": "cae_profile",
+      "url": "s3://test_bucket/cae_generated_profile.json",
+      "cae_options": {
+        "min_renditions": 1,
+        "max_renditions": 6
+      }
+    },
+    {"source": "cae_profile", "cae_rendition": 1}, {"source": "cae_profile", "cae_rendition": 2},
+    {"source": "cae_profile", "cae_rendition": 3}, {"source": "cae_profile", "cae_rendition": 4},
+    {"source": "cae_profile", "cae_rendition": 5}, {"source": "cae_profile", "cae_rendition": 6}
+  ]
+ }</code></pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="guidelines_for_configuring_cae_options">구성을 위한 가이드라인<code translate="No">cae_options</code></h2>
+
+    <h3>변환 수</h3>
+
+    <p>생성 할 최소 및 최대 변환 수는<a href="/encoding-settings/general/cae-settings.html#min_renditions"> min_renditions</a>과<a href="/encoding-settings/general/cae-settings.html#max_renditions"> max_renditions</a>설정. 최상의 성능을 위해서는 CAE 프로파일 생성기가 각 콘텐츠에 가장 적합한 숫자를 선택할 수 있도록 이러한 제한 사이에 일정한 간격을 두는 것이 좋습니다 (예: 2와<code translate="No">max_renditions</code> 10으로 설정<code translate="No">min_renditions</code> ). 콘텐츠를 쉽게 인코딩하기 위해 더 적은 수의 변환을 생성 할 수있는 반면 더 복잡한 콘텐츠의 경우 더 많이 생성 할 수 있습니다. 또한 더 많은 변환이 필요하지 않을 때 대역폭을 절약 할 수 있도록 min_renditions를 가능한 한 작게 설정하는 것이 좋습니다.</p>
+
+    <h3>결의안</h3>
+
+    <p>기본적으로 CAE는 약 30 개의 표준 해상도의 래더를 사용합니다. <code translate="No">192x108</code> ...에<code translate="No">7680x4320</code> . 다음을 사용하여 로우 엔드 또는 하이 엔드로 제한 할 수 있습니다. <a href="/encoding-settings/general/cae-settings.html#min_resolution">최소 해상도</a>과<a href="/encoding-settings/general/cae-settings.html#max_resolution">최대 해상도</a>설정. 또는 해상도 및 관련 코덱 설정의 사용자 지정 목록을 제공 할 수 있습니다. <a href="/encoding-settings/general/cae-settings.html#video_configurations"><code translate="No">video_configurations</code></a>환경.</p>
+
+    <h3>GOP 길이</h3>
+
+    <p>그만큼<a href="/encoding-settings/general/cae-settings.html#keyframe_rate"><code translate="No">keyframe_rate</code></a>설정은 최대를 제어합니다<code translate="No">GOP</code>인코딩 된 콘텐츠의 길이. 일치하도록 설정<a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#segment_seconds"><code translate="No">segment_seconds</code></a> HLS / DASH 인코딩 용. 그렇지 않으면 2 초에 해당하는 0.5의 값이 권장됩니다. <code translate="No">GOP</code>길이.</p>
+
+    <h3>비트 레이트 범위</h3>
+
+    <p>사용할 비트 전송률의 제한은<a href="/encoding-settings/general/cae-settings.html#min_bitrate"><code translate="No">min_bitrate</code></a>과<a href="/encoding-settings/general/cae-settings.html#max_bitrate"><code translate="No">max_bitrate</code></a>설정. 이렇게하면 CAE가 최소한<a href="/encoding-settings/general/cae-settings.html#min_bitrate"><code translate="No">min_bitrate</code></a>첫 번째 변환의 경우 Kbps이고 마지막 변환은 최대로 제한<a href="/encoding-settings/general/cae-settings.html#max_bitrate"><code translate="No">max_bitrate</code></a> Kbps.</p>
+
+    <p>변환 비트 전송률의 간격이 적절한 지 확인하려면<a href="/encoding-settings/general/cae-settings.html#min_granularity"><code translate="No">min_granularity</code></a>과<a href="/encoding-settings/general/cae-settings.html#max_granularity"><code translate="No">max_granularity</code></a>설정. 예를 들어, 한 비트 전송률에서 다음 전송률까지의 단계가 비트 전송률이 50 % 이상 증가하거나 비트 전송률이 100 % 이상 증가하는지 확인하는 데 사용할 수 있습니다. 대부분의 스트리밍 제작 지침은 세분성이 100 %를 초과하지 않도록 권장합니다.</p>
+
+    <h3>시작 지연, 열악한 네트워크 조건에서의 안정성</h3>
+
+    <p>비트 레이트 래더가 항상 충분히 낮은 비트 레이트로 시작되도록하려면<a href="/encoding-settings/general/cae-settings.html#max_first_rendition_bitrate"><code translate="No">max_first_rendition_bitrate</code></a>환경. 첫 번째 변환 비트 전송률이 낮을수록 낮은 연결 속도로 인해 비디오 플레이어가 버퍼링해야 할 가능성이 줄어 듭니다. 또한 스트리밍 매니페스트가 가장 낮은 비트 전송률을 먼저로드하도록 표시하면 시작 지연 시간에도 직접적인 영향을 미칩니다.</p>
+
+    <h3>레거시 장치 지원</h3>
+
+    <p>기능 만 가능한 구형 장치를 지원하려면<code translate="No"><code translate="No">Baseline</code></code>프로필 H.264 재생, <a href="/encoding-settings/general/cae-settings.html#select_baseline_profile_configuration"><code translate="No">select_baseline_profile_configuration</code></a>환경. 이것이 설정되면 하나 이상의 변환이 다음으로 인코딩됩니다. <code translate="No">Baseline</code>프로필. 추가 제약 (코덱 프로파일, 레벨, 참조 프레임 수, B- 프레임 등)은 사용자 정의로 제어 할 수 있습니다. <a href="/encoding-settings/general/cae-settings.html#video_configurations"><code translate="No">video_configurations</code></a>환경.</p>
+    <p>참고<code translate="No">select_baseline_profile_configuration</code>이다<code translate="No">true</code>기본적으로<em>하나 이상의 변환</em>해상도가 512x288 이하입니다.</p>
+
+    <h3>VBR 가변성 제어</h3>
+
+    <p>최대 최고 비트 전송률은<a href="/encoding-settings/general/cae-settings.html#bitrate_cap_to_bitrate_ratio"><code translate="No">bitrate_cap_to_bitrate_ratio</code></a>과<a href="/encoding-settings/general/cae-settings.html#bitrate_cap_offset"> bitrate_cap_offset</a>설정. 비트 전송률 " <code translate="No">R</code>”가 변환으로 선택되면<a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#decoder_bitrate_cap">디코더 _ 비트 레이트 _ 캡</a>다음과 같이 계산됩니다.</p>
+
+    <pre class="line-numbers">
+  <code class="language-javascript" translate="No">decoder_bitrate_cap = R * bitrate_cap_to_bitrate_ratio + bitrate_cap_offset</code></code></pre>
+
+    <p>마찬가지로 디코더 버퍼 제한은<a href="/encoding-settings/general/cae-settings.html#buffer_size_to_bitrate_ratio"><code translate="No">buffer_size_to_bitrate_ratio</code></a>과<a href="/encoding-settings/general/cae-settings.html#buffer_size_offset"><code translate="No">buffer_size_offset</code></a>설정. 그만큼<a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html#decoder_buffer_size"><code translate="No">decoder_buffer_size</code></a>다음과 같이 계산됩니다.</p>
+
+    <pre class="line-numbers">
+  <code class="language-javascript" translate="No">decoder_buffer_size = R * buffer_size_to_bitrate_ratio + buffer_size_offset</code></pre>
+
+    <p>최대 비트 전송률 및 버퍼 제한은 코덱 프로필 및 / 또는 수준 설정에 의해 제한 될 수도 있습니다. 몇 가지 일반적인 장치 호환성 문제는 다음을 제한하여 피할 수 있습니다. <a href="/encoding-settings/general/cae-settings.html#bitrate_cap_to_bitrate_ratio"><code translate="No">bitrate_cap_to_bitrate_ratio</code></a> 2.0 이하, <a href="/encoding-settings/general/cae-settings.html#buffer_size_to_bitrate_ratio"><code translate="No">buffer_size_to_bitrate_ratio</code></a> ...에<code translate="No">2.0 * GOP length</code> (초).</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="CAE_and_Segmented_outputs">CAE 및 세그먼트 출력</h2>
+
+    <p>CAE는 Zencoder의 분할 된 출력과 호환됩니다. 에<code translate="No">Output</code>변환 설정, <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#type"><code translate="No">type</code></a>같이<code translate="No">segmented</code>그리고 적절한<a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html#segment_seconds"><code translate="No">segment_seconds</code></a>값. 또한, <a href="/encoding-settings/general/cae-settings.html#keyframe_rate"><code translate="No">keyframe_rate</code></a>과<a href="/encoding-settings/general-audio-video/encoding-settings-frame-rate.html#fixed_keyframe_interval"><code translate="No">fixed_keyframe_interval</code></a>설정을 지정해야합니다. <code translate="No">cae_options</code> .</p>
+
+    <h3>CAE-HLS 예</h3>
+
+<pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "input": "s3://test_bucket/test_media.mp4",
+  "outputs": [
+    {
+      "type": "cae",
+      "label": "cae_profile",
+      "base_url": "s3://test_bucket/outputs/hls_cae/",
+      "filename": "cae_options.json",
+      "cae_options": {
+        "max_renditions": 6,
+        "min_renditions": 2,
+        "keyframe_rate": "0.5",
+        "fixed_keyframe_interval": "true"
+      }
+    },
+    {
+      "source": "cae_options",
+      "label": "cae_1",
+      "cae_rendition": 1,
+      "base_url": "s3://test_bucket/outputs/hls_cae/cae_1",
+      "filename": "cae_1.m3u8",
+      "type": "segmented",
+      "segment_seconds": 2,
+      "byte_range_segmenting": true,
+      "generate_keyframe_manifest": "true",
+      "hls_protocol_version": 7,
+      "skip_audio": true
+    },
+    {
+      "source": "cae_options",
+      "label": "cae_2",
+      "cae_rendition": 2,
+      "base_url": "s3://test_bucket/outputs/hls_cae/cae_2",
+      "filename": "cae_2.m3u8",
+      "type": "segmented",
+      "segment_seconds": 2,
+      "byte_range_segmenting": true,
+      "generate_keyframe_manifest": "true",
+      "hls_protocol_version": 7,
+      "skip_audio": true
+    },
+    {
+      "source": "cae_options",
+      "label": "cae_3",
+      "cae_rendition": 3,
+      "base_url": "s3://test_bucket/outputs/hls_cae/cae_3",
+      "filename": "cae_3.m3u8",
+      "type": "segmented",
+      "segment_seconds": 2,
+      "byte_range_segmenting": true,
+      "generate_keyframe_manifest": "true",
+      "hls_protocol_version": 7,
+      "skip_audio": true
+    },
+    {
+      "source": "cae_options",
+      "label": "cae_4",
+      "cae_rendition": 4,
+      "base_url": "s3://test_bucket/outputs/hls_cae/cae_4",
+      "filename": "cae_4.m3u8",
+      "type": "segmented",
+      "segment_seconds": 2,
+      "byte_range_segmenting": true,
+      "generate_keyframe_manifest": "true",
+      "hls_protocol_version": 7,
+      "skip_audio": true
+    },
+    {
+      "source": "cae_options",
+      "label": "cae_5",
+      "cae_rendition": 5,
+      "base_url": "s3://test_bucket/outputs/hls_cae/cae_5",
+      "filename": "cae_5.m3u8",
+      "type": "segmented",
+      "segment_seconds": 2,
+      "byte_range_segmenting": true,
+      "generate_keyframe_manifest": "true",
+      "hls_protocol_version": 7,
+      "skip_audio": true
+    },
+    {
+      "source": "cae_options",
+      "label": "cae_6",
+      "cae_rendition": 6,
+      "base_url": "s3://test_bucket/outputs/hls_cae/cae_6",
+      "filename": "cae_6.m3u8",
+      "type": "segmented",
+      "segment_seconds": 2,
+      "byte_range_segmenting": true,
+      "generate_keyframe_manifest": "true",
+      "hls_protocol_version": 7,
+      "skip_audio": true
+    },
+    {
+      "label": "Audio",
+      "audio_bitrate": "128",
+      "type": "segmented",
+      "segment_seconds": 2,
+      "byte_range_segmenting": true,
+      "skip_video": true,
+      "base_url": "s3://test_bucket/outputs/hls_cae/Audio/128k/",
+      "filename": "audio_128k.ac3"
+    },
+    {
+      "base_url": "s3://test_bucket/outputs/hls_cae/",
+      "filename": "master_playlist.m3u8",
+      "hls_protocol_version": 7,
+      "type": "playlist",
+      "allow_skipped_sources": true,
+      "alternate_audio": {
+        "128k_audio": {
+          "path": "Audio/128k/audio_128k.m3u8",
+          "language": "en",
+          "source": "Audio"
+        }
+      },
+      "streams": [
+        {
+          "path": "cae_1/cae_1.m3u8",
+          "source": "cae_1",
+          "audio": "128k_audio"
+        },
+        {
+          "path": "cae_2/cae_2.m3u8",
+          "source": "cae_2",
+          "audio": "128k_audio"
+        },
+        {
+          "path": "cae_3/cae_3.m3u8",
+          "source": "cae_3",
+          "audio": "128k_audio"
+        },
+        {
+          "path": "cae_4/cae_4.m3u8",
+          "source": "cae_4",
+          "audio": "128k_audio"
+        },
+        {
+          "path": "cae_5/cae_5.m3u8",
+          "source": "cae_5",
+          "audio": "128k_audio"
+        },
+        {
+          "path": "cae_6/cae_6.m3u8",
+          "source": "cae_6",
+          "audio": "128k_audio"
+        }
+      ]
+    }
+  ]
+}</code></pre>
+
+    <h3>CAE-DASH 예</h3>
+
+<pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "input": "s3://test_bucket/test.mov",
+  "outputs": [
+    {
+      "type": "cae",
+      "label": "cae_profile",
+      "base_url": "s3://test_bucket/outputs/hls_cae/",
+      "filename": "cae_options.json",
+      "cae_options": {
+        "max_renditions": 6,
+        "min_renditions": 2,
+        "keyframe_rate": "0.5",
+        "fixed_keyframe_interval": "true"
+      }
+    },
+    {
+      "source": "cae_options",
+      "label": "cae_1",
+      "cae_rendition": 1,
+      "base_url": "s3://test_bucket/outputs/dash_cae/cae_1",
+      "filename": "cae_1.mpd",
+      "type": "segmented",
+      "segment_seconds": 10,
+      "streaming_delivery_format": "dash",
+      "skip_audio": true,
+      "public": true
+    },
+    {
+      "source": "cae_options",
+      "label": "cae_2",
+      "cae_rendition": 2,
+      "base_url": "s3://test_bucket/outputs/dash_cae/cae_2",
+      "filename": "cae_2.mpd",
+      "type": "segmented",
+      "segment_seconds": 10,
+      "streaming_delivery_format": "dash",
+      "skip_audio": true,
+      "public": true
+    },
+    {
+      "source": "cae_options",
+      "label": "cae_3",
+      "cae_rendition": 3,
+      "base_url": "s3://test_bucket/outputs/dash_cae/cae_3",
+      "filename": "cae_3.mpd",
+      "type": "segmented",
+      "segment_seconds": 10,
+      "streaming_delivery_format": "dash",
+      "skip_audio": true,
+      "public": true
+    },
+    {
+      "source": "cae_options",
+      "label": "cae_4",
+      "cae_rendition": 4,
+      "base_url": "s3://test_bucket/outputs/dash_cae/cae_4",
+      "filename": "cae_4.mpd",
+      "type": "segmented",
+      "segment_seconds": 10,
+      "streaming_delivery_format": "dash",
+      "skip_audio": true,
+      "public": true
+    },
+    {
+      "source": "cae_options",
+      "label": "cae_5",
+      "cae_rendition": 5,
+      "base_url": "s3://test_bucket/outputs/dash_cae/cae_5",
+      "filename": "cae_5.mpd",
+      "type": "segmented",
+      "segment_seconds": 10,
+      "streaming_delivery_format": "dash",
+      "skip_audio": true,
+      "public": true
+    },
+    {
+      "source": "cae_options",
+      "label": "cae_6",
+      "cae_rendition": 6,
+      "base_url": "s3://test_bucket/outputs/dash_cae/cae_6",
+      "filename": "cae_6.mpd",
+      "type": "segmented",
+      "segment_seconds": 10,
+      "streaming_delivery_format": "dash",
+      "skip_audio": true,
+      "public": true
+    },
+    {
+      "label": "Audio",
+      "audio_bitrate": "128",
+      "type": "segmented",
+      "segment_seconds": 10,
+      "streaming_delivery_format": "dash",
+      "skip_video": true,
+      "base_url": "s3://test_bucket/outputs/dash_cae/Audio/128k/",
+      "filename": "audio_128k.mpd",
+      "public": true
+    },
+    {
+      "base_url": "s3://test_bucket/outputs/dash_cae/",
+      "filename": "master_playlist.mpd",
+      "streaming_delivery_format": "dash",
+      "type": "playlist",
+      "allow_skipped_sources": true,
+      "public": true,
+      "streams": [
+        {
+          "path": "cae_1/cae_1.mpd",
+          "source": "cae_1"
+        },
+        {
+          "path": "cae_2/cae_2.mpd",
+          "source": "cae_2"
+        },
+        {
+          "path": "cae_3/cae_3.mpd",
+          "source": "cae_3"
+        },
+        {
+          "path": "cae_4/cae_4.mpd",
+          "source": "cae_4"
+        },
+        {
+          "path": "cae_5/cae_5.mpd",
+          "source": "cae_5"
+        },
+        {
+          "path": "cae_6/cae_6.mpd",
+          "source": "cae_6"
+        },
+        {
+          "path": "Audio/128k/audio_128k.mpd",
+          "source": "Audio"
+        }
+      ]
+    }
+  ]
+}</code></pre>
+  </section>
+</article>
+<!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
+  
+  <nav class="right-side-nav" id="right_side_nav">
+    <h6 class="toc">페이지 내용</h6>
+    <ul id="in_page_nav" class="list-none"></ul>
+  </nav>
+  
+<!-- </div> -->
+</div>
+</div>
+</div>
+<div class="page-content" style="background-color: rgb(1, 5, 14);">
+  <div class="container" style="width: 50%;">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md">
+          <h5 class="h5-text">브라이트코브 지원</h5>
+          <ul class="list-unstyled text-small" style="color: white ;">
+            <li><a class="a-text" href="https://status.brightcove.com">시스템 상태</a></li>
+            <li><a class="a-text" href="https://supportportal.brightcove.com">고객 지원 문의</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/search.html">모든 문서 검색</a></li>
+          </ul>
+        </div>
+      
+        <div class="col-6 col-md">
+          <h5 class="h5-text">교육</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">온라인 코스</a></li>
+            <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/register-training.html">강좌 등록</a></li>
+            <li><a class="a-text" href="https://academy.brightcove.com/">브라이트코브 아카데미</a></li>
+          </ul>
+        </div>
+      
+        <div class="col-6 col-md">
+          <h5 class="h5-text">Brightcove</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="a-text" href="https://www.brightcove.com">브라이트코브닷컴</a></li>
+            <li><a class="a-text" href="https://community.brightcove.com/s/">밝은 자리 커뮤니티 포럼</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/product-updates.html">제품 릴리스 정보</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/doc-updates.html">설명서 업데이트</a></li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>© Brightcove Inc. 판권 소유.</p>
+      <a class="a-text" href="https://www.brightcove.com/en/legal/privacy">프라이버시</a><a class="a-text" href="https://www.brightcove.com/en/terms-and-conditions">이용 약관</a>
+
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" target="_blank" class="gf-social-linkedin" style="margin-right: 1rem;"><i data-feather="linkedin" style="color:#8E9093;height: 1.25rem;"></i></a></li>
+
+        <li class="ms-3"><a href="https://twitter.com/brightcove" title="Twitter" target="_blank" class="gf-social-twitter" style="margin-right: 1rem;"><i data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a></li>
+
+        <li class="ms-3"><a href="https://www.facebook.com/Brightcove" title="Facebook" target="_blank" class="gf-social-facebook"><i data-feather="facebook" style="color:#8E9093;height: 1.25rem;"></i></a></li>
+      </ul>
+      </div>
+    </footer>
+  </div>
+</div>
+
+
+<script translate="no">
+  var searchBox = sajari.init({
+    mode: "search-box",
+    project: "1588255093746585379", // Set this to your project.
+    collection: "brightcove-documentation", // Set this to your collection.
+    instantPipeline: "autocomplete", // Pipeline used as you type
+    inputPlaceholder: "Search", // Input element placeholder,
+    styling: {
+      components: {
+        
+        input: {
+          container: {
+          backgroundColor: 'white',
+          }
+        
+        }
+      }
+    },
+    maxSuggestions: 5, // Maximum number of suggestions to show
+      attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+  });
+
+  
+
+
+    searchBox("sub", "pipeline.search-sent", function (_, query) {
+    window.location = "/search.html?q=" + encodeURIComponent(query.q);
+    });
+  
+  </script>
+  
+  <!-- Javascript -->          
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/popper.min.js"></script>
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+
+
+  <!-- Page Specific JS -->
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/smoothscroll.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> -->
+  <!-- <script src="/assets/s-site-assets-template-stylesheets/js/highlight-custom.js"></script>  -->
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+  <script src="/assets/s-site-assets-template-stylesheets/js/docs.js"></script> 
+
+  <!-- original footer components -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+  <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+  <script src="/assets/s-site-assets-scripts/selector.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/prism.js"></script>
+  <script src="/assets/s-site-assets-scripts/prism-normalize.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
+  <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/tabs.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/toc-new-template.js"></script>
+  
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+  <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
+  
+  <script translate="no">
+    feather.replace()
+  </script>
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/in-app.js"></script>
+  <style translate="no">
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
+
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
+
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
+
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
+
+  </body>
+</html> 
